@@ -1,0 +1,5324 @@
+{
+  "char_f8214802": {
+    "char_c7a4d611": {
+      "label": "cooc_scene",
+      "weight": 48,
+      "evidence": []
+    },
+    "char_e580edbc": {
+      "label": "cooc_sent",
+      "weight": 69,
+      "evidence": []
+    },
+    "char_544e163c": {
+      "label": "cooc_scene",
+      "weight": 11,
+      "evidence": []
+    },
+    "char_25985230": {
+      "label": "cooc_scene",
+      "weight": 16,
+      "evidence": []
+    },
+    "char_1bd4a65f": {
+      "label": "cooc_sent",
+      "weight": 13,
+      "evidence": []
+    },
+    "char_f27035b6": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_ef32b156": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_ddc6979a": {
+      "label": "cooc_sent",
+      "weight": 11,
+      "evidence": []
+    },
+    "char_f5afa047": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_2c33ff58": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_01017f4f": {
+      "label": "cooc_scene",
+      "weight": 15,
+      "evidence": []
+    },
+    "char_dc361ddc": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 21,
+      "evidence": []
+    },
+    "char_f90d4ad2": {
+      "label": "cooc_sent",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_cf868802": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_edac8206": {
+      "label": "cooc_sent",
+      "weight": 31,
+      "evidence": []
+    },
+    "char_7326ec70": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_df33148f": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_2ba32817": {
+      "label": "cooc_sent",
+      "weight": 19,
+      "evidence": []
+    },
+    "char_ad93fd49": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_2f196d52": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_79aa0cd5": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_c96716c9": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_80a0e773": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_6660302b": {
+      "label": "cooc_sent",
+      "weight": 11,
+      "evidence": []
+    },
+    "char_f4eb4cc4": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_3053ef3e": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_b17f3a91": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_d5955b0d": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_aa22250d": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_534b2a7d": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_9c277f7e": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_0a2ae60f": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "char_e642377d": {
+      "label": "cooc_sent",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_7d68ce6e": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_d7e80960": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_5ddebd99": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_ca73f7be": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_bbc1d6b6": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_8b2a14ae": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_c8623ff7": {
+      "label": "cooc_sent",
+      "weight": 13,
+      "evidence": []
+    },
+    "char_e27c2ef0": {
+      "label": "cooc_sent",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_0cf0ee08": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_a9e65868": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_c04dcf90": {
+      "label": "cooc_sent",
+      "weight": 24,
+      "evidence": []
+    },
+    "char_1de910df": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_f7c0a7ee": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_bf4cfdf2": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_cc2997dc": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "char_582b2938": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "char_5aa5d0e1": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_f57a5600": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "char_acf1af34": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_464c8e2a": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_761f89b0": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_839b48a5": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_e3034944": {
+      "label": "cooc_sent",
+      "weight": 2,
+      "evidence": []
+    },
+    "char_32a6cd0c": {
+      "label": "cooc_sent",
+      "weight": 2,
+      "evidence": []
+    }
+  },
+  "char_c7a4d611": {
+    "char_f8214802": {
+      "label": "cooc_scene",
+      "weight": 48,
+      "evidence": []
+    },
+    "char_e580edbc": {
+      "label": "cooc_sent",
+      "weight": 48,
+      "evidence": []
+    },
+    "char_544e163c": {
+      "label": "cooc_scene",
+      "weight": 11,
+      "evidence": []
+    },
+    "char_25985230": {
+      "label": "cooc_scene",
+      "weight": 16,
+      "evidence": []
+    },
+    "char_1bd4a65f": {
+      "label": "cooc_sent",
+      "weight": 13,
+      "evidence": []
+    },
+    "char_ef32b156": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_ddc6979a": {
+      "label": "cooc_sent",
+      "weight": 11,
+      "evidence": []
+    },
+    "char_f5afa047": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_2c33ff58": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_01017f4f": {
+      "label": "cooc_scene",
+      "weight": 15,
+      "evidence": []
+    },
+    "char_dc361ddc": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_af16bde5": {
+      "label": "cooc_sent",
+      "weight": 20,
+      "evidence": []
+    },
+    "char_f90d4ad2": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_cf868802": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_edac8206": {
+      "label": "cooc_sent",
+      "weight": 31,
+      "evidence": []
+    },
+    "char_7326ec70": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_df33148f": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_2ba32817": {
+      "label": "cooc_sent",
+      "weight": 18,
+      "evidence": []
+    },
+    "char_ad93fd49": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_2f196d52": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_c96716c9": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_80a0e773": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_6660302b": {
+      "label": "cooc_scene",
+      "weight": 11,
+      "evidence": []
+    },
+    "char_f4eb4cc4": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_3053ef3e": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_b17f3a91": {
+      "label": "cooc_sent",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_d5955b0d": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_aa22250d": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_534b2a7d": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_e642377d": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_7d68ce6e": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_d7e80960": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_5ddebd99": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_ca73f7be": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_9c277f7e": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_bbc1d6b6": {
+      "label": "cooc_sent",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_8b2a14ae": {
+      "label": "cooc_sent",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_c8623ff7": {
+      "label": "cooc_scene",
+      "weight": 14,
+      "evidence": []
+    },
+    "char_e27c2ef0": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_0a2ae60f": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "char_0cf0ee08": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_a9e65868": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_c04dcf90": {
+      "label": "cooc_sent",
+      "weight": 9,
+      "evidence": []
+    },
+    "char_1de910df": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_f7c0a7ee": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_bf4cfdf2": {
+      "label": "cooc_sent",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_cc2997dc": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "char_582b2938": {
+      "label": "cooc_sent",
+      "weight": 8,
+      "evidence": []
+    },
+    "char_5aa5d0e1": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_f57a5600": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "char_acf1af34": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_464c8e2a": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_761f89b0": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_839b48a5": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_5feb0ee8": {
+      "label": "cooc_sent",
+      "weight": 2,
+      "evidence": []
+    },
+    "char_5cce9d23": {
+      "label": "cooc_sent",
+      "weight": 2,
+      "evidence": []
+    }
+  },
+  "char_65b38ff5": {
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_e580edbc": {
+    "char_65b38ff5": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_c7a4d611": {
+      "label": "cooc_sent",
+      "weight": 48,
+      "evidence": []
+    },
+    "char_544e163c": {
+      "label": "cooc_scene",
+      "weight": 12,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_sent",
+      "weight": 69,
+      "evidence": []
+    },
+    "char_25985230": {
+      "label": "cooc_scene",
+      "weight": 19,
+      "evidence": []
+    },
+    "char_1bd4a65f": {
+      "label": "cooc_sent",
+      "weight": 15,
+      "evidence": []
+    },
+    "char_f27035b6": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_ef32b156": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_ddc6979a": {
+      "label": "cooc_scene",
+      "weight": 12,
+      "evidence": []
+    },
+    "char_f5afa047": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "char_2c33ff58": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_01017f4f": {
+      "label": "cooc_scene",
+      "weight": 15,
+      "evidence": []
+    },
+    "char_dc361ddc": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 23,
+      "evidence": []
+    },
+    "char_f90d4ad2": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_cf868802": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_edac8206": {
+      "label": "cooc_sent",
+      "weight": 30,
+      "evidence": []
+    },
+    "char_96b60f93": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_569d6f6f": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_7326ec70": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_df33148f": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_2ba32817": {
+      "label": "cooc_scene",
+      "weight": 19,
+      "evidence": []
+    },
+    "char_ad93fd49": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_2f196d52": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_c96716c9": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_80a0e773": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_6660302b": {
+      "label": "cooc_scene",
+      "weight": 12,
+      "evidence": []
+    },
+    "char_f4eb4cc4": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_67764228": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_3053ef3e": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_b17f3a91": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_d5955b0d": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_aa22250d": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_9c277f7e": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_0a2ae60f": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "char_e642377d": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_7d68ce6e": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_d7e80960": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_5ddebd99": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_ca73f7be": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_bbc1d6b6": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_8b2a14ae": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_c8623ff7": {
+      "label": "cooc_scene",
+      "weight": 13,
+      "evidence": []
+    },
+    "char_e27c2ef0": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_534b2a7d": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_516d2501": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_0cf0ee08": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_a9e65868": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_c04dcf90": {
+      "label": "cooc_sent",
+      "weight": 9,
+      "evidence": []
+    },
+    "char_1de910df": {
+      "label": "cooc_sent",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_f7c0a7ee": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_bf4cfdf2": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_cc2997dc": {
+      "label": "cooc_sent",
+      "weight": 8,
+      "evidence": []
+    },
+    "char_582b2938": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "char_5aa5d0e1": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_f57a5600": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_acf1af34": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_464c8e2a": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_761f89b0": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_839b48a5": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_4abb1eb5": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_0f89a3e2": {
+      "label": "cooc_sent",
+      "weight": 2,
+      "evidence": []
+    },
+    "char_d85e8699": {
+      "label": "cooc_sent",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_544e163c": {
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 12,
+      "evidence": []
+    },
+    "char_c7a4d611": {
+      "label": "cooc_scene",
+      "weight": 11,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_scene",
+      "weight": 11,
+      "evidence": []
+    },
+    "char_25985230": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_1bd4a65f": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_ddc6979a": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "char_bce68579": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_edac8206": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_96b60f93": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_2ba32817": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_01017f4f": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 9,
+      "evidence": []
+    },
+    "char_c8623ff7": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_c04dcf90": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_534b2a7d": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_6660302b": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_cc2997dc": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_582b2938": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_f57a5600": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    }
+  },
+  "char_25985230": {
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 19,
+      "evidence": []
+    },
+    "char_c7a4d611": {
+      "label": "cooc_scene",
+      "weight": 16,
+      "evidence": []
+    },
+    "char_544e163c": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_scene",
+      "weight": 16,
+      "evidence": []
+    },
+    "char_1bd4a65f": {
+      "label": "cooc_scene",
+      "weight": 9,
+      "evidence": []
+    },
+    "char_ddc6979a": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_f5afa047": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_edac8206": {
+      "label": "cooc_scene",
+      "weight": 10,
+      "evidence": []
+    },
+    "char_dc361ddc": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_2ba32817": {
+      "label": "cooc_scene",
+      "weight": 9,
+      "evidence": []
+    },
+    "char_df33148f": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_2f196d52": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_96b60f93": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "char_6660302b": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_f4eb4cc4": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_01017f4f": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_0a2ae60f": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    }
+  },
+  "char_1bd4a65f": {
+    "char_ddc6979a": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_e580edbc": {
+      "label": "cooc_sent",
+      "weight": 15,
+      "evidence": []
+    },
+    "char_f5afa047": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_c7a4d611": {
+      "label": "cooc_sent",
+      "weight": 13,
+      "evidence": []
+    },
+    "char_544e163c": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_sent",
+      "weight": 13,
+      "evidence": []
+    },
+    "char_25985230": {
+      "label": "cooc_scene",
+      "weight": 9,
+      "evidence": []
+    },
+    "char_edac8206": {
+      "label": "cooc_scene",
+      "weight": 11,
+      "evidence": []
+    },
+    "char_96b60f93": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_569d6f6f": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_df33148f": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_2ba32817": {
+      "label": "cooc_scene",
+      "weight": 9,
+      "evidence": []
+    },
+    "char_dc361ddc": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_2f196d52": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_6660302b": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_0a2ae60f": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_516d2501": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_bbc1d6b6": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_c04dcf90": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_f27035b6": {
+    "char_ddc6979a": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_ef32b156": {
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_c7a4d611": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    }
+  },
+  "char_ddc6979a": {
+    "char_1bd4a65f": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_f27035b6": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 12,
+      "evidence": []
+    },
+    "char_f5afa047": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "char_c7a4d611": {
+      "label": "cooc_sent",
+      "weight": 11,
+      "evidence": []
+    },
+    "char_544e163c": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_sent",
+      "weight": 11,
+      "evidence": []
+    },
+    "char_25985230": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_2c33ff58": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_01017f4f": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_af16bde5": {
+      "label": "cooc_sent",
+      "weight": 18,
+      "evidence": []
+    },
+    "char_bce68579": {
+      "label": "cooc_sent",
+      "weight": 11,
+      "evidence": []
+    },
+    "char_e18aa9c7": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_cf868802": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "char_edac8206": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_96b60f93": {
+      "label": "cooc_sent",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_569d6f6f": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_df33148f": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_de5ab5bc": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_87188708": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_c8623ff7": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_2ba32817": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_6660302b": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "char_f57a5600": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "char_cc2997dc": {
+      "label": "cooc_scene",
+      "weight": 9,
+      "evidence": []
+    },
+    "char_761f89b0": {
+      "label": "cooc_sent",
+      "weight": 12,
+      "evidence": []
+    },
+    "char_582b2938": {
+      "label": "cooc_scene",
+      "weight": 10,
+      "evidence": []
+    },
+    "char_1af5faa3": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_d4650053": {
+      "label": "cooc_sent",
+      "weight": 7,
+      "evidence": []
+    },
+    "char_4abb1eb5": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_4c850318": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_c9d9dbd1": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_c96716c9": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_e8b3d168": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_15f6a694": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_ebd7cf38": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_593d784d": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_d5955b0d": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_7518c2aa": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_f5afa047": {
+    "char_1bd4a65f": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_ddc6979a": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "char_c7a4d611": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_25985230": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_bce68579": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_edac8206": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_96b60f93": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_569d6f6f": {
+      "label": "cooc_sent",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 10,
+      "evidence": []
+    },
+    "char_6660302b": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_9c277f7e": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_cc2997dc": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_d4650053": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_761f89b0": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_2c33ff58": {
+    "char_ddc6979a": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_c7a4d611": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_cc2997dc": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_01017f4f": {
+    "char_ddc6979a": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 15,
+      "evidence": []
+    },
+    "char_c7a4d611": {
+      "label": "cooc_scene",
+      "weight": 15,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_scene",
+      "weight": 15,
+      "evidence": []
+    },
+    "char_af16bde5": {
+      "label": "cooc_sent",
+      "weight": 15,
+      "evidence": []
+    },
+    "char_edac8206": {
+      "label": "cooc_scene",
+      "weight": 10,
+      "evidence": []
+    },
+    "char_f4eb4cc4": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_da2caf23": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_df33148f": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_d5955b0d": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_25985230": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_7518c2aa": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_544e163c": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_6660302b": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_c8623ff7": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_2ba32817": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_9c277f7e": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_c04dcf90": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_80a0e773": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_cc2997dc": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_c96716c9": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_582b2938": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "char_5aa5d0e1": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_bce68579": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_f57a5600": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "char_761f89b0": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    }
+  },
+  "char_dc361ddc": {
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_c7a4d611": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_1bd4a65f": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_edac8206": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_2ba32817": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_25985230": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_c8623ff7": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_af16bde5": {
+    "char_2c33ff58": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_ddc6979a": {
+      "label": "cooc_sent",
+      "weight": 18,
+      "evidence": []
+    },
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 23,
+      "evidence": []
+    },
+    "char_01017f4f": {
+      "label": "cooc_sent",
+      "weight": 15,
+      "evidence": []
+    },
+    "char_c7a4d611": {
+      "label": "cooc_sent",
+      "weight": 20,
+      "evidence": []
+    },
+    "char_dc361ddc": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_scene",
+      "weight": 21,
+      "evidence": []
+    },
+    "char_f27035b6": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_2f196d52": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_edac8206": {
+      "label": "cooc_scene",
+      "weight": 12,
+      "evidence": []
+    },
+    "char_c96716c9": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_80a0e773": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_f5afa047": {
+      "label": "cooc_scene",
+      "weight": 10,
+      "evidence": []
+    },
+    "char_6660302b": {
+      "label": "cooc_scene",
+      "weight": 14,
+      "evidence": []
+    },
+    "char_25985230": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "char_f4eb4cc4": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_1bd4a65f": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_da2caf23": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "char_df33148f": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_d5955b0d": {
+      "label": "cooc_scene",
+      "weight": 12,
+      "evidence": []
+    },
+    "char_7518c2aa": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_544e163c": {
+      "label": "cooc_scene",
+      "weight": 9,
+      "evidence": []
+    },
+    "char_de5ab5bc": {
+      "label": "cooc_sent",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_87188708": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_534b2a7d": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_e18aa9c7": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_7326ec70": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_d4e81bfd": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_569d6f6f": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_2ba32817": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "char_9c277f7e": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "char_0a2ae60f": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_7d68ce6e": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_3311564e": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_5ddebd99": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_ca73f7be": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_a9e65868": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_c04dcf90": {
+      "label": "cooc_sent",
+      "weight": 9,
+      "evidence": []
+    },
+    "char_c8623ff7": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "char_bf4cfdf2": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_afa06f0f": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_cc2997dc": {
+      "label": "cooc_scene",
+      "weight": 11,
+      "evidence": []
+    },
+    "char_582b2938": {
+      "label": "cooc_scene",
+      "weight": 10,
+      "evidence": []
+    },
+    "char_5aa5d0e1": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_bce68579": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_f57a5600": {
+      "label": "cooc_scene",
+      "weight": 13,
+      "evidence": []
+    },
+    "char_acf1af34": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_761f89b0": {
+      "label": "cooc_sent",
+      "weight": 9,
+      "evidence": []
+    },
+    "char_d4650053": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_839b48a5": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_c9d9dbd1": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_cf868802": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_e8b3d168": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_4abb1eb5": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_96b60f93": {
+      "label": "cooc_sent",
+      "weight": 9,
+      "evidence": []
+    },
+    "char_15f6a694": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_05769fe2": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_e5356fef": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_ad486344": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_7906af28": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_ebd7cf38": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_2c17355b": {
+      "label": "cooc_sent",
+      "weight": 2,
+      "evidence": []
+    }
+  },
+  "char_f90d4ad2": {
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_c7a4d611": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_sent",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_bce68579": {
+    "char_ddc6979a": {
+      "label": "cooc_sent",
+      "weight": 11,
+      "evidence": []
+    },
+    "char_cf868802": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_569d6f6f": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_544e163c": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_df33148f": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_f5afa047": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_f57a5600": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_cc2997dc": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_01017f4f": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_761f89b0": {
+      "label": "cooc_sent",
+      "weight": 9,
+      "evidence": []
+    },
+    "char_582b2938": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_1af5faa3": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_d4650053": {
+      "label": "cooc_sent",
+      "weight": 7,
+      "evidence": []
+    },
+    "char_6660302b": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_4c850318": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_ebd7cf38": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    }
+  },
+  "char_e18aa9c7": {
+    "char_ddc6979a": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_569d6f6f": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_87188708": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_cf868802": {
+    "char_bce68579": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_ddc6979a": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_edac8206": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_c7a4d611": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_df33148f": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_761f89b0": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_cc2997dc": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_582b2938": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_4c850318": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_edac8206": {
+    "char_ddc6979a": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_e580edbc": {
+      "label": "cooc_sent",
+      "weight": 30,
+      "evidence": []
+    },
+    "char_cf868802": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_c7a4d611": {
+      "label": "cooc_sent",
+      "weight": 31,
+      "evidence": []
+    },
+    "char_544e163c": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_7326ec70": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_df33148f": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_sent",
+      "weight": 31,
+      "evidence": []
+    },
+    "char_1bd4a65f": {
+      "label": "cooc_scene",
+      "weight": 11,
+      "evidence": []
+    },
+    "char_f5afa047": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_ad93fd49": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_01017f4f": {
+      "label": "cooc_scene",
+      "weight": 10,
+      "evidence": []
+    },
+    "char_dc361ddc": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_2ba32817": {
+      "label": "cooc_scene",
+      "weight": 15,
+      "evidence": []
+    },
+    "char_25985230": {
+      "label": "cooc_scene",
+      "weight": 10,
+      "evidence": []
+    },
+    "char_2f196d52": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 12,
+      "evidence": []
+    },
+    "char_c96716c9": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_6660302b": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "char_b17f3a91": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_d5955b0d": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_e642377d": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_7d68ce6e": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_d7e80960": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_ca73f7be": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_9c277f7e": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_bbc1d6b6": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_8b2a14ae": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_c8623ff7": {
+      "label": "cooc_scene",
+      "weight": 11,
+      "evidence": []
+    },
+    "char_e27c2ef0": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_0a2ae60f": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "char_0cf0ee08": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_a9e65868": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_c04dcf90": {
+      "label": "cooc_sent",
+      "weight": 8,
+      "evidence": []
+    },
+    "char_1de910df": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_bf4cfdf2": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_f57a5600": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "char_acf1af34": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_464c8e2a": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_cc2997dc": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_761f89b0": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_582b2938": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_5aa5d0e1": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_96b60f93": {
+    "char_ddc6979a": {
+      "label": "cooc_sent",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_569d6f6f": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_544e163c": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_1bd4a65f": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_f5afa047": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_25985230": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_af16bde5": {
+      "label": "cooc_sent",
+      "weight": 9,
+      "evidence": []
+    },
+    "char_15f6a694": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_e8b3d168": {
+      "label": "cooc_sent",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_de5ab5bc": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_623aa666": {
+      "label": "cooc_sent",
+      "weight": 2,
+      "evidence": []
+    },
+    "char_2c17355b": {
+      "label": "cooc_sent",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_569d6f6f": {
+    "char_bce68579": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_ddc6979a": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_e18aa9c7": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_96b60f93": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_1bd4a65f": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_f5afa047": {
+      "label": "cooc_sent",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    }
+  },
+  "char_7326ec70": {
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_edac8206": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_c7a4d611": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_df33148f": {
+    "char_bce68579": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_ddc6979a": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_cf868802": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_edac8206": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_c7a4d611": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_1bd4a65f": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_25985230": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_01017f4f": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_2ba32817": {
+    "char_1bd4a65f": {
+      "label": "cooc_scene",
+      "weight": 9,
+      "evidence": []
+    },
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 19,
+      "evidence": []
+    },
+    "char_c7a4d611": {
+      "label": "cooc_sent",
+      "weight": 18,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_sent",
+      "weight": 19,
+      "evidence": []
+    },
+    "char_edac8206": {
+      "label": "cooc_scene",
+      "weight": 15,
+      "evidence": []
+    },
+    "char_dc361ddc": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_25985230": {
+      "label": "cooc_scene",
+      "weight": 9,
+      "evidence": []
+    },
+    "char_2f196d52": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_544e163c": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_9c277f7e": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_0a2ae60f": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "char_b17f3a91": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_bbc1d6b6": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_8b2a14ae": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_01017f4f": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_c8623ff7": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "char_e27c2ef0": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_ddc6979a": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_534b2a7d": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_6660302b": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_e642377d": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_0cf0ee08": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_c04dcf90": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_bf4cfdf2": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_cc2997dc": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_582b2938": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_f57a5600": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_ad93fd49": {
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_edac8206": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_c7a4d611": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_2f196d52": {
+    "char_2ba32817": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_1bd4a65f": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_edac8206": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_c7a4d611": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_25985230": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    }
+  },
+  "char_79aa0cd5": {
+    "char_f8214802": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_c96716c9": {
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_edac8206": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_c7a4d611": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_cc2997dc": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_01017f4f": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_582b2938": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_ddc6979a": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_80a0e773": {
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_c7a4d611": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_6660302b": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_01017f4f": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_6660302b": {
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 14,
+      "evidence": []
+    },
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 12,
+      "evidence": []
+    },
+    "char_edac8206": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "char_80a0e773": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_f5afa047": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_c7a4d611": {
+      "label": "cooc_scene",
+      "weight": 11,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_sent",
+      "weight": 11,
+      "evidence": []
+    },
+    "char_25985230": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_01017f4f": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_1bd4a65f": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_ddc6979a": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "char_534b2a7d": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_c8623ff7": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "char_2ba32817": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_0a2ae60f": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_bbc1d6b6": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_8b2a14ae": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_0cf0ee08": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_c04dcf90": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_f7c0a7ee": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_544e163c": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_d5955b0d": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_afa06f0f": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_cc2997dc": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_582b2938": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_bce68579": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_f57a5600": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_761f89b0": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_d4650053": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    }
+  },
+  "char_f4eb4cc4": {
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_c7a4d611": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_25985230": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_01017f4f": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_67764228": {
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_3053ef3e": {
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_c7a4d611": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_b17f3a91": {
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_edac8206": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_c7a4d611": {
+      "label": "cooc_sent",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_e642377d": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_2ba32817": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_0a2ae60f": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_da2caf23": {
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "char_01017f4f": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_d5955b0d": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_7518c2aa": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_a9e65868": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_c04dcf90": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_f57a5600": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    }
+  },
+  "char_d5955b0d": {
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 12,
+      "evidence": []
+    },
+    "char_da2caf23": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_edac8206": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_01017f4f": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_c7a4d611": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_7518c2aa": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "char_c04dcf90": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_afa06f0f": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_6660302b": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_f57a5600": {
+      "label": "cooc_sent",
+      "weight": 8,
+      "evidence": []
+    },
+    "char_761f89b0": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_e5356fef": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_ad486344": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_9bb9bff9": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_ddc6979a": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    }
+  },
+  "char_7518c2aa": {
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_da2caf23": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_01017f4f": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_d5955b0d": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "char_c04dcf90": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_e5356fef": {
+      "label": "cooc_sent",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_f57a5600": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_9bb9bff9": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_ddc6979a": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_aa22250d": {
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_c7a4d611": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_de5ab5bc": {
+    "char_ddc6979a": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_af16bde5": {
+      "label": "cooc_sent",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_e8b3d168": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_96b60f93": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    }
+  },
+  "char_87188708": {
+    "char_ddc6979a": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_e18aa9c7": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_534b2a7d": {
+    "char_c7a4d611": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_c8623ff7": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_2ba32817": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_6660302b": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_544e163c": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_d4e81bfd": {
+    "char_9c277f7e": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_9c277f7e": {
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_d4e81bfd": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_f5afa047": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_2ba32817": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_0a2ae60f": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "char_edac8206": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_c7a4d611": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_01017f4f": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_c8623ff7": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_0a2ae60f": {
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "char_2ba32817": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "char_9c277f7e": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_b17f3a91": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_edac8206": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "char_c8623ff7": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_e27c2ef0": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_c7a4d611": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "char_25985230": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_1bd4a65f": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_6660302b": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_e642377d": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_c04dcf90": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_bf4cfdf2": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_e642377d": {
+    "char_b17f3a91": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_edac8206": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_c7a4d611": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_sent",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_2ba32817": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_0a2ae60f": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_7d68ce6e": {
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_edac8206": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_3311564e": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_c7a4d611": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_5ddebd99": {
+      "label": "cooc_sent",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_ca73f7be": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_c04dcf90": {
+      "label": "cooc_sent",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_6d235f51": {
+      "label": "cooc_sent",
+      "weight": 2,
+      "evidence": []
+    }
+  },
+  "char_3311564e": {
+    "char_7d68ce6e": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_5ddebd99": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_ca73f7be": {
+      "label": "cooc_sent",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_d7e80960": {
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_edac8206": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_c7a4d611": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_5ddebd99": {
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_7d68ce6e": {
+      "label": "cooc_sent",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_3311564e": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_c7a4d611": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_ca73f7be": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_60cae97f": {
+      "label": "cooc_sent",
+      "weight": 2,
+      "evidence": []
+    }
+  },
+  "char_ca73f7be": {
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_edac8206": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_7d68ce6e": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_3311564e": {
+      "label": "cooc_sent",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_c7a4d611": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_5ddebd99": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_bbc1d6b6": {
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_8b2a14ae": {
+      "label": "cooc_sent",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_edac8206": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_c8623ff7": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_c7a4d611": {
+      "label": "cooc_sent",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_2ba32817": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_1bd4a65f": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_0cf0ee08": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_6660302b": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_8b2a14ae": {
+    "char_bbc1d6b6": {
+      "label": "cooc_sent",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_edac8206": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_c8623ff7": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_c7a4d611": {
+      "label": "cooc_sent",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_2ba32817": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_0cf0ee08": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_6660302b": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_c8623ff7": {
+    "char_bbc1d6b6": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 13,
+      "evidence": []
+    },
+    "char_8b2a14ae": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_edac8206": {
+      "label": "cooc_scene",
+      "weight": 11,
+      "evidence": []
+    },
+    "char_01017f4f": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_e27c2ef0": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_dc361ddc": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_c7a4d611": {
+      "label": "cooc_scene",
+      "weight": 14,
+      "evidence": []
+    },
+    "char_2ba32817": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_sent",
+      "weight": 13,
+      "evidence": []
+    },
+    "char_9c277f7e": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_0a2ae60f": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_ddc6979a": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_534b2a7d": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_6660302b": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "char_c04dcf90": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "char_544e163c": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_cc2997dc": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_582b2938": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_e27c2ef0": {
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_edac8206": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_c8623ff7": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_c7a4d611": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_2ba32817": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_sent",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_0a2ae60f": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_516d2501": {
+    "char_1bd4a65f": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_0cf0ee08": {
+    "char_bbc1d6b6": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_edac8206": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_8b2a14ae": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_c7a4d611": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_2ba32817": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_6660302b": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_a9e65868": {
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_edac8206": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_c7a4d611": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_c04dcf90": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_da2caf23": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_f57a5600": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_c04dcf90": {
+    "char_e580edbc": {
+      "label": "cooc_sent",
+      "weight": 9,
+      "evidence": []
+    },
+    "char_edac8206": {
+      "label": "cooc_sent",
+      "weight": 8,
+      "evidence": []
+    },
+    "char_01017f4f": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_c7a4d611": {
+      "label": "cooc_sent",
+      "weight": 9,
+      "evidence": []
+    },
+    "char_2ba32817": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_0a2ae60f": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_af16bde5": {
+      "label": "cooc_sent",
+      "weight": 9,
+      "evidence": []
+    },
+    "char_a9e65868": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_sent",
+      "weight": 24,
+      "evidence": []
+    },
+    "char_7518c2aa": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_1bd4a65f": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_da2caf23": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_6660302b": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_c8623ff7": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_1de910df": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_bf4cfdf2": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_544e163c": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_d5955b0d": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_7d68ce6e": {
+      "label": "cooc_sent",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_f57a5600": {
+      "label": "cooc_sent",
+      "weight": 7,
+      "evidence": []
+    }
+  },
+  "char_1de910df": {
+    "char_e580edbc": {
+      "label": "cooc_sent",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_c04dcf90": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_edac8206": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_c7a4d611": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_f7c0a7ee": {
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_c7a4d611": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_6660302b": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_bf4cfdf2": {
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_edac8206": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_c7a4d611": {
+      "label": "cooc_sent",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_2ba32817": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_0a2ae60f": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_c04dcf90": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_afa06f0f": {
+    "char_d5955b0d": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_6660302b": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_cc2997dc": {
+    "char_e580edbc": {
+      "label": "cooc_sent",
+      "weight": 8,
+      "evidence": []
+    },
+    "char_c8623ff7": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_c96716c9": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_01017f4f": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_c7a4d611": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "char_2ba32817": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_544e163c": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 11,
+      "evidence": []
+    },
+    "char_582b2938": {
+      "label": "cooc_scene",
+      "weight": 11,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "char_5aa5d0e1": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_6660302b": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_bce68579": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_ddc6979a": {
+      "label": "cooc_scene",
+      "weight": 9,
+      "evidence": []
+    },
+    "char_f57a5600": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "char_edac8206": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_acf1af34": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_2c33ff58": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_761f89b0": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_d4650053": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_4abb1eb5": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_4c850318": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_cf868802": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_f5afa047": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_582b2938": {
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "char_c8623ff7": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_cc2997dc": {
+      "label": "cooc_scene",
+      "weight": 11,
+      "evidence": []
+    },
+    "char_c96716c9": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_01017f4f": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "char_c7a4d611": {
+      "label": "cooc_sent",
+      "weight": 8,
+      "evidence": []
+    },
+    "char_2ba32817": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_544e163c": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 10,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "char_5aa5d0e1": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_6660302b": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_bce68579": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_ddc6979a": {
+      "label": "cooc_scene",
+      "weight": 10,
+      "evidence": []
+    },
+    "char_f57a5600": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "char_edac8206": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_acf1af34": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_761f89b0": {
+      "label": "cooc_sent",
+      "weight": 8,
+      "evidence": []
+    },
+    "char_d4650053": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_4abb1eb5": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_4c850318": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_cf868802": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_5aa5d0e1": {
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_cc2997dc": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_01017f4f": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_c7a4d611": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_582b2938": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_f57a5600": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_edac8206": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_f57a5600": {
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_c04dcf90": {
+      "label": "cooc_sent",
+      "weight": 7,
+      "evidence": []
+    },
+    "char_edac8206": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "char_acf1af34": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_464c8e2a": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_c7a4d611": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "char_bce68579": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_ddc6979a": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "char_cc2997dc": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "char_01017f4f": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "char_544e163c": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 13,
+      "evidence": []
+    },
+    "char_761f89b0": {
+      "label": "cooc_sent",
+      "weight": 9,
+      "evidence": []
+    },
+    "char_582b2938": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "char_5aa5d0e1": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_1af5faa3": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_d4650053": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_6660302b": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_d5955b0d": {
+      "label": "cooc_sent",
+      "weight": 8,
+      "evidence": []
+    },
+    "char_2ba32817": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_da2caf23": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_9bb9bff9": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_7518c2aa": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_a9e65868": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_acf1af34": {
+    "char_f57a5600": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_edac8206": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_c7a4d611": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_cc2997dc": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_582b2938": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_464c8e2a": {
+    "char_f57a5600": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_edac8206": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_c7a4d611": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_761f89b0": {
+    "char_bce68579": {
+      "label": "cooc_sent",
+      "weight": 9,
+      "evidence": []
+    },
+    "char_ddc6979a": {
+      "label": "cooc_sent",
+      "weight": 12,
+      "evidence": []
+    },
+    "char_f57a5600": {
+      "label": "cooc_sent",
+      "weight": 9,
+      "evidence": []
+    },
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_cc2997dc": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_edac8206": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_01017f4f": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_c7a4d611": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_af16bde5": {
+      "label": "cooc_sent",
+      "weight": 9,
+      "evidence": []
+    },
+    "char_582b2938": {
+      "label": "cooc_sent",
+      "weight": 8,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_1af5faa3": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_d4650053": {
+      "label": "cooc_sent",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_6660302b": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_d5955b0d": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_cf868802": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_4c850318": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_ebd7cf38": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_f5afa047": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_1af5faa3": {
+    "char_bce68579": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_ddc6979a": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_f57a5600": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_761f89b0": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_d4650053": {
+    "char_bce68579": {
+      "label": "cooc_sent",
+      "weight": 7,
+      "evidence": []
+    },
+    "char_ddc6979a": {
+      "label": "cooc_sent",
+      "weight": 7,
+      "evidence": []
+    },
+    "char_f57a5600": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_cc2997dc": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_761f89b0": {
+      "label": "cooc_sent",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_582b2938": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_6660302b": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_ebd7cf38": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_f5afa047": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_839b48a5": {
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_c7a4d611": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_f8214802": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_4abb1eb5": {
+    "char_ddc6979a": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_e580edbc": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_cc2997dc": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_582b2938": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_4c850318": {
+    "char_ddc6979a": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "char_cc2997dc": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_582b2938": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_cf868802": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_761f89b0": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_bce68579": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_ebd7cf38": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_c9d9dbd1": {
+    "char_ddc6979a": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_e8b3d168": {
+    "char_ddc6979a": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_de5ab5bc": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_96b60f93": {
+      "label": "cooc_sent",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_15f6a694": {
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_ddc6979a": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_96b60f93": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_05769fe2": {
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_e5356fef": {
+    "char_ad486344": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_d5955b0d": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "char_7518c2aa": {
+      "label": "cooc_sent",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_ad486344": {
+    "char_e5356fef": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_d5955b0d": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_7906af28": {
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_9bb9bff9": {
+    "char_f57a5600": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_d5955b0d": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_7518c2aa": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_ebd7cf38": {
+    "char_bce68579": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_ddc6979a": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_4c850318": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_761f89b0": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "char_af16bde5": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_d4650053": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_593d784d": {
+    "char_ddc6979a": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_5feb0ee8": {
+    "char_c7a4d611": {
+      "label": "cooc_sent",
+      "weight": 2,
+      "evidence": []
+    }
+  },
+  "char_a7a07849": {
+    "char_e3034944": {
+      "label": "cooc_sent",
+      "weight": 4,
+      "evidence": []
+    }
+  },
+  "char_e3034944": {
+    "char_f8214802": {
+      "label": "cooc_sent",
+      "weight": 2,
+      "evidence": []
+    },
+    "char_a7a07849": {
+      "label": "cooc_sent",
+      "weight": 4,
+      "evidence": []
+    }
+  },
+  "char_60cae97f": {
+    "char_5ddebd99": {
+      "label": "cooc_sent",
+      "weight": 2,
+      "evidence": []
+    }
+  },
+  "char_6d235f51": {
+    "char_7d68ce6e": {
+      "label": "cooc_sent",
+      "weight": 2,
+      "evidence": []
+    }
+  },
+  "char_32a6cd0c": {
+    "char_f8214802": {
+      "label": "cooc_sent",
+      "weight": 2,
+      "evidence": []
+    }
+  },
+  "char_0f89a3e2": {
+    "char_e580edbc": {
+      "label": "cooc_sent",
+      "weight": 2,
+      "evidence": []
+    }
+  },
+  "char_d85e8699": {
+    "char_e580edbc": {
+      "label": "cooc_sent",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "char_5cce9d23": {
+    "char_c7a4d611": {
+      "label": "cooc_sent",
+      "weight": 2,
+      "evidence": []
+    }
+  },
+  "char_623aa666": {
+    "char_96b60f93": {
+      "label": "cooc_sent",
+      "weight": 2,
+      "evidence": []
+    }
+  },
+  "char_2c17355b": {
+    "char_96b60f93": {
+      "label": "cooc_sent",
+      "weight": 3,
+      "evidence": []
+    },
+    "char_af16bde5": {
+      "label": "cooc_sent",
+      "weight": 2,
+      "evidence": []
+    }
+  }
+}

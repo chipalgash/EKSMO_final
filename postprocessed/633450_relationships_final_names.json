@@ -1,0 +1,5324 @@
+{
+  "Реймонд": {
+    "Рей": {
+      "label": "cooc_scene",
+      "weight": 48,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_sent",
+      "weight": 48,
+      "evidence": []
+    },
+    "Старик": {
+      "label": "cooc_scene",
+      "weight": 11,
+      "evidence": []
+    },
+    "Эльфийка": {
+      "label": "cooc_scene",
+      "weight": 16,
+      "evidence": []
+    },
+    "Здоровяк": {
+      "label": "cooc_sent",
+      "weight": 13,
+      "evidence": []
+    },
+    "Учитель": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Императоры": {
+      "label": "cooc_sent",
+      "weight": 11,
+      "evidence": []
+    },
+    "Арчибальд Энур": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Матьбогиня": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Вы": {
+      "label": "cooc_scene",
+      "weight": 15,
+      "evidence": []
+    },
+    "Тракт": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_sent",
+      "weight": 20,
+      "evidence": []
+    },
+    "Христя": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Первый Император": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Тоги": {
+      "label": "cooc_sent",
+      "weight": 31,
+      "evidence": []
+    },
+    "Охотник": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Империя": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Варвар": {
+      "label": "cooc_sent",
+      "weight": 18,
+      "evidence": []
+    },
+    "Меч": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Даик": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Капитолис": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Юилия Хааман": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Вудбург": {
+      "label": "cooc_scene",
+      "weight": 11,
+      "evidence": []
+    },
+    "Материбогиня": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Жизнь": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Ауззик": {
+      "label": "cooc_sent",
+      "weight": 6,
+      "evidence": []
+    },
+    "Гвурии": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Каменный Стена": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Гильдия": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Ауззика": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Эон": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Волна": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Кайло": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Эры Миля": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Тарисса Раенный": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Эссенция Мана": {
+      "label": "cooc_sent",
+      "weight": 5,
+      "evidence": []
+    },
+    "Зелье Восстановление": {
+      "label": "cooc_sent",
+      "weight": 5,
+      "evidence": []
+    },
+    "Арчер": {
+      "label": "cooc_scene",
+      "weight": 14,
+      "evidence": []
+    },
+    "Леди Раенный": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Лик": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "Молния": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Црум": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Лоэк": {
+      "label": "cooc_sent",
+      "weight": 9,
+      "evidence": []
+    },
+    "Ростен": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Морда": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Лоэкомы": {
+      "label": "cooc_sent",
+      "weight": 3,
+      "evidence": []
+    },
+    "Булиэнна": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "Маркиза": {
+      "label": "cooc_sent",
+      "weight": 8,
+      "evidence": []
+    },
+    "Таюс Понг": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Альпина": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "Просвиры": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Экзарх": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Сувор": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Леди": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Кенштайны": {
+      "label": "cooc_sent",
+      "weight": 2,
+      "evidence": []
+    },
+    "Родич": {
+      "label": "cooc_sent",
+      "weight": 2,
+      "evidence": []
+    }
+  },
+  "Рей": {
+    "Реймонд": {
+      "label": "cooc_scene",
+      "weight": 48,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_sent",
+      "weight": 69,
+      "evidence": []
+    },
+    "Старик": {
+      "label": "cooc_scene",
+      "weight": 11,
+      "evidence": []
+    },
+    "Эльфийка": {
+      "label": "cooc_scene",
+      "weight": 16,
+      "evidence": []
+    },
+    "Здоровяк": {
+      "label": "cooc_sent",
+      "weight": 13,
+      "evidence": []
+    },
+    "Тишина": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Учитель": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Императоры": {
+      "label": "cooc_sent",
+      "weight": 11,
+      "evidence": []
+    },
+    "Арчибальд Энур": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Матьбогиня": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Вы": {
+      "label": "cooc_scene",
+      "weight": 15,
+      "evidence": []
+    },
+    "Тракт": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 21,
+      "evidence": []
+    },
+    "Христя": {
+      "label": "cooc_sent",
+      "weight": 3,
+      "evidence": []
+    },
+    "Первый Император": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Тоги": {
+      "label": "cooc_sent",
+      "weight": 31,
+      "evidence": []
+    },
+    "Охотник": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Империя": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Варвар": {
+      "label": "cooc_sent",
+      "weight": 19,
+      "evidence": []
+    },
+    "Меч": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Даик": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Декан": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Капитолис": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Юилия Хааман": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Вудбург": {
+      "label": "cooc_sent",
+      "weight": 11,
+      "evidence": []
+    },
+    "Материбогиня": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Жизнь": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Ауззик": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Гвурии": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Каменный Стена": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Гильдия": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Тарисса Раенный": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Лик": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "Ауззика": {
+      "label": "cooc_sent",
+      "weight": 5,
+      "evidence": []
+    },
+    "Эон": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Волна": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Кайло": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Эры Миля": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Эссенция Мана": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Зелье Восстановление": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Арчер": {
+      "label": "cooc_sent",
+      "weight": 13,
+      "evidence": []
+    },
+    "Леди Раенный": {
+      "label": "cooc_sent",
+      "weight": 3,
+      "evidence": []
+    },
+    "Молния": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Црум": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Лоэк": {
+      "label": "cooc_sent",
+      "weight": 24,
+      "evidence": []
+    },
+    "Ростен": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Морда": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Лоэкомы": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Булиэнна": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "Маркиза": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "Таюс Понг": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Альпина": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "Просвиры": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Экзарх": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Сувор": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Леди": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Джорека": {
+      "label": "cooc_sent",
+      "weight": 2,
+      "evidence": []
+    },
+    "Зыбучая Ловушка": {
+      "label": "cooc_sent",
+      "weight": 2,
+      "evidence": []
+    }
+  },
+  "Юиль": {
+    "Рей": {
+      "label": "cooc_sent",
+      "weight": 69,
+      "evidence": []
+    },
+    "Реймонд": {
+      "label": "cooc_sent",
+      "weight": 48,
+      "evidence": []
+    },
+    "Громила": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Старик": {
+      "label": "cooc_scene",
+      "weight": 12,
+      "evidence": []
+    },
+    "Эльфийка": {
+      "label": "cooc_scene",
+      "weight": 19,
+      "evidence": []
+    },
+    "Здоровяк": {
+      "label": "cooc_sent",
+      "weight": 15,
+      "evidence": []
+    },
+    "Тишина": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Учитель": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Императоры": {
+      "label": "cooc_scene",
+      "weight": 12,
+      "evidence": []
+    },
+    "Арчибальд Энур": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "Матьбогиня": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Вы": {
+      "label": "cooc_scene",
+      "weight": 15,
+      "evidence": []
+    },
+    "Тракт": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 23,
+      "evidence": []
+    },
+    "Христя": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Первый Император": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Тоги": {
+      "label": "cooc_sent",
+      "weight": 30,
+      "evidence": []
+    },
+    "Арчибальд": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Архимаг": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Охотник": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Империя": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Варвар": {
+      "label": "cooc_scene",
+      "weight": 19,
+      "evidence": []
+    },
+    "Меч": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Даик": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Капитолис": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Юилия Хааман": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Вудбург": {
+      "label": "cooc_scene",
+      "weight": 12,
+      "evidence": []
+    },
+    "Материбогиня": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Она": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Жизнь": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Ауззик": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Гвурии": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Каменный Стена": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Тарисса Раенный": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Лик": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "Ауззика": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Эон": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Волна": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Кайло": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Эры Миля": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Эссенция Мана": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Зелье Восстановление": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Арчер": {
+      "label": "cooc_scene",
+      "weight": 13,
+      "evidence": []
+    },
+    "Леди Раенный": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Гильдия": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Пол": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Молния": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Црум": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Лоэк": {
+      "label": "cooc_sent",
+      "weight": 9,
+      "evidence": []
+    },
+    "Ростен": {
+      "label": "cooc_sent",
+      "weight": 3,
+      "evidence": []
+    },
+    "Морда": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Лоэкомы": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Булиэнна": {
+      "label": "cooc_sent",
+      "weight": 8,
+      "evidence": []
+    },
+    "Маркиза": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "Таюс Понг": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Альпина": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Просвиры": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Экзарх": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Сувор": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Леди": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Реест": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Совиный Взор": {
+      "label": "cooc_sent",
+      "weight": 2,
+      "evidence": []
+    },
+    "Бодрянка": {
+      "label": "cooc_sent",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Старик": {
+    "Рей": {
+      "label": "cooc_scene",
+      "weight": 11,
+      "evidence": []
+    },
+    "Реймонд": {
+      "label": "cooc_scene",
+      "weight": 11,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 12,
+      "evidence": []
+    },
+    "Эльфийка": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Здоровяк": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Императоры": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "Правящая Мать": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Тоги": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Арчибальд": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Варвар": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Вы": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 9,
+      "evidence": []
+    },
+    "Арчер": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Лоэк": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Гильдия": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Вудбург": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Булиэнна": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Маркиза": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Альпина": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    }
+  },
+  "Эльфийка": {
+    "Рей": {
+      "label": "cooc_scene",
+      "weight": 16,
+      "evidence": []
+    },
+    "Реймонд": {
+      "label": "cooc_scene",
+      "weight": 16,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 19,
+      "evidence": []
+    },
+    "Старик": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Здоровяк": {
+      "label": "cooc_scene",
+      "weight": 9,
+      "evidence": []
+    },
+    "Императоры": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Арчибальд Энур": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Тоги": {
+      "label": "cooc_scene",
+      "weight": 10,
+      "evidence": []
+    },
+    "Тракт": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Варвар": {
+      "label": "cooc_scene",
+      "weight": 9,
+      "evidence": []
+    },
+    "Империя": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Даик": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Арчибальд": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "Вудбург": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Материбогиня": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Вы": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Лик": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    }
+  },
+  "Здоровяк": {
+    "Рей": {
+      "label": "cooc_sent",
+      "weight": 13,
+      "evidence": []
+    },
+    "Реймонд": {
+      "label": "cooc_sent",
+      "weight": 13,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_sent",
+      "weight": 15,
+      "evidence": []
+    },
+    "Старик": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Эльфийка": {
+      "label": "cooc_scene",
+      "weight": 9,
+      "evidence": []
+    },
+    "Императоры": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Арчибальд Энур": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Тоги": {
+      "label": "cooc_scene",
+      "weight": 11,
+      "evidence": []
+    },
+    "Арчибальд": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Архимаг": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Империя": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Варвар": {
+      "label": "cooc_scene",
+      "weight": 9,
+      "evidence": []
+    },
+    "Тракт": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Даик": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Вудбург": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Лик": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Пол": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Эссенция Мана": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Лоэк": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Тишина": {
+    "Рей": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Императоры": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Учитель": {
+    "Рей": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Реймонд": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    }
+  },
+  "Императоры": {
+    "Рей": {
+      "label": "cooc_sent",
+      "weight": 11,
+      "evidence": []
+    },
+    "Реймонд": {
+      "label": "cooc_sent",
+      "weight": 11,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 12,
+      "evidence": []
+    },
+    "Старик": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "Эльфийка": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Здоровяк": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Тишина": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Арчибальд Энур": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "Матьбогиня": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Вы": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_sent",
+      "weight": 18,
+      "evidence": []
+    },
+    "Правящая Мать": {
+      "label": "cooc_sent",
+      "weight": 11,
+      "evidence": []
+    },
+    "Август Четвёртый": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Первый Император": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "Тоги": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Арчибальд": {
+      "label": "cooc_sent",
+      "weight": 6,
+      "evidence": []
+    },
+    "Архимаг": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Империя": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Август": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Август Седьмая": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Арчер": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Варвар": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Вудбург": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "Альпина": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "Булиэнна": {
+      "label": "cooc_scene",
+      "weight": 9,
+      "evidence": []
+    },
+    "Сувор": {
+      "label": "cooc_sent",
+      "weight": 12,
+      "evidence": []
+    },
+    "Маркиза": {
+      "label": "cooc_scene",
+      "weight": 10,
+      "evidence": []
+    },
+    "Ростак Альпина": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Мать": {
+      "label": "cooc_sent",
+      "weight": 7,
+      "evidence": []
+    },
+    "Реест": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Тарикус": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Он Величество": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Капитолис": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Ваш Величество": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Клык": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Анции": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Легат": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Гвурии": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Артик Гвурии": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Арчибальд Энур": {
+    "Рей": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Реймонд": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "Эльфийка": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Здоровяк": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Императоры": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "Правящая Мать": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Тоги": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Арчибальд": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Архимаг": {
+      "label": "cooc_sent",
+      "weight": 5,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 10,
+      "evidence": []
+    },
+    "Вудбург": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Тарисса Раенный": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Булиэнна": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Мать": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Сувор": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Матьбогиня": {
+    "Рей": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Реймонд": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Императоры": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Булиэнна": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Вы": {
+    "Рей": {
+      "label": "cooc_scene",
+      "weight": 15,
+      "evidence": []
+    },
+    "Реймонд": {
+      "label": "cooc_scene",
+      "weight": 15,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 15,
+      "evidence": []
+    },
+    "Старик": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Эльфийка": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Императоры": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_sent",
+      "weight": 15,
+      "evidence": []
+    },
+    "Тоги": {
+      "label": "cooc_scene",
+      "weight": 10,
+      "evidence": []
+    },
+    "Материбогиня": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Лоэк Црум": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Империя": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Гвурии": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Артик Гвурии": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Вудбург": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Арчер": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Варвар": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Тарисса Раенный": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Лоэк": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Юилия Хааман": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Булиэнна": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Капитолис": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Маркиза": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "Таюс Понг": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Правящая Мать": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Альпина": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "Сувор": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    }
+  },
+  "Тракт": {
+    "Рей": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Реймонд": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Эльфийка": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Здоровяк": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Тоги": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Варвар": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Арчер": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Далее Энур": {
+    "Рей": {
+      "label": "cooc_scene",
+      "weight": 21,
+      "evidence": []
+    },
+    "Реймонд": {
+      "label": "cooc_sent",
+      "weight": 20,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 23,
+      "evidence": []
+    },
+    "Старик": {
+      "label": "cooc_scene",
+      "weight": 9,
+      "evidence": []
+    },
+    "Эльфийка": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "Здоровяк": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Тишина": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Императоры": {
+      "label": "cooc_sent",
+      "weight": 18,
+      "evidence": []
+    },
+    "Арчибальд Энур": {
+      "label": "cooc_scene",
+      "weight": 10,
+      "evidence": []
+    },
+    "Матьбогиня": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Вы": {
+      "label": "cooc_sent",
+      "weight": 15,
+      "evidence": []
+    },
+    "Тракт": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Даик": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Тоги": {
+      "label": "cooc_scene",
+      "weight": 12,
+      "evidence": []
+    },
+    "Капитолис": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Юилия Хааман": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Вудбург": {
+      "label": "cooc_scene",
+      "weight": 14,
+      "evidence": []
+    },
+    "Материбогиня": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Лоэк Црум": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "Империя": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Гвурии": {
+      "label": "cooc_scene",
+      "weight": 12,
+      "evidence": []
+    },
+    "Артик Гвурии": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Август": {
+      "label": "cooc_sent",
+      "weight": 6,
+      "evidence": []
+    },
+    "Август Седьмая": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Гильдия": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Август Четвёртый": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Охотник": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Тарисса": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Архимаг": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Варвар": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "Тарисса Раенный": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "Лик": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Эон": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Эон Наалек": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Кайло": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Эры Миля": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Црум": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Лоэк": {
+      "label": "cooc_sent",
+      "weight": 9,
+      "evidence": []
+    },
+    "Арчер": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "Лоэкомы": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Проганик": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Булиэнна": {
+      "label": "cooc_scene",
+      "weight": 11,
+      "evidence": []
+    },
+    "Маркиза": {
+      "label": "cooc_scene",
+      "weight": 10,
+      "evidence": []
+    },
+    "Таюс Понг": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Правящая Мать": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Альпина": {
+      "label": "cooc_scene",
+      "weight": 13,
+      "evidence": []
+    },
+    "Просвиры": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Сувор": {
+      "label": "cooc_sent",
+      "weight": 9,
+      "evidence": []
+    },
+    "Мать": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Леди": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Он Величество": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Первый Император": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Ваш Величество": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Реест": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Арчибальд": {
+      "label": "cooc_sent",
+      "weight": 9,
+      "evidence": []
+    },
+    "Клык": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Академия": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Айка Реедящий": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Айка": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Фельдмаршальский Жезл": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Анции": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Марцелла": {
+      "label": "cooc_sent",
+      "weight": 2,
+      "evidence": []
+    }
+  },
+  "Христя": {
+    "Рей": {
+      "label": "cooc_sent",
+      "weight": 3,
+      "evidence": []
+    },
+    "Реймонд": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Первый Император": {
+    "Рей": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Реймонд": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Императоры": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Правящая Мать": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Тоги": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Империя": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Сувор": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Булиэнна": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Маркиза": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Тарикус": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Тоги": {
+    "Рей": {
+      "label": "cooc_sent",
+      "weight": 31,
+      "evidence": []
+    },
+    "Реймонд": {
+      "label": "cooc_sent",
+      "weight": 31,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_sent",
+      "weight": 30,
+      "evidence": []
+    },
+    "Старик": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Эльфийка": {
+      "label": "cooc_scene",
+      "weight": 10,
+      "evidence": []
+    },
+    "Здоровяк": {
+      "label": "cooc_scene",
+      "weight": 11,
+      "evidence": []
+    },
+    "Императоры": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Арчибальд Энур": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Вы": {
+      "label": "cooc_scene",
+      "weight": 10,
+      "evidence": []
+    },
+    "Тракт": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 12,
+      "evidence": []
+    },
+    "Первый Император": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Охотник": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Империя": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Меч": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Варвар": {
+      "label": "cooc_scene",
+      "weight": 15,
+      "evidence": []
+    },
+    "Даик": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Капитолис": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Вудбург": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "Ауззик": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Гвурии": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Ауззика": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Эон": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Волна": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Эры Миля": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Тарисса Раенный": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Эссенция Мана": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Зелье Восстановление": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Арчер": {
+      "label": "cooc_scene",
+      "weight": 11,
+      "evidence": []
+    },
+    "Леди Раенный": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Лик": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "Молния": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Црум": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Лоэк": {
+      "label": "cooc_sent",
+      "weight": 8,
+      "evidence": []
+    },
+    "Ростен": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Лоэкомы": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Альпина": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "Просвиры": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Экзарх": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Булиэнна": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Сувор": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Маркиза": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Таюс Понг": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Охотник": {
+    "Рей": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Реймонд": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Тоги": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Империя": {
+    "Рей": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Реймонд": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Эльфийка": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Здоровяк": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Императоры": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Вы": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Правящая Мать": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Первый Император": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Тоги": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Варвар": {
+    "Рей": {
+      "label": "cooc_sent",
+      "weight": 19,
+      "evidence": []
+    },
+    "Реймонд": {
+      "label": "cooc_sent",
+      "weight": 18,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 19,
+      "evidence": []
+    },
+    "Старик": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Эльфийка": {
+      "label": "cooc_scene",
+      "weight": 9,
+      "evidence": []
+    },
+    "Здоровяк": {
+      "label": "cooc_scene",
+      "weight": 9,
+      "evidence": []
+    },
+    "Императоры": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Вы": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Тракт": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "Тоги": {
+      "label": "cooc_scene",
+      "weight": 15,
+      "evidence": []
+    },
+    "Даик": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Тарисса Раенный": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Лик": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "Ауззик": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Эссенция Мана": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Зелье Восстановление": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Арчер": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "Леди Раенный": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Гильдия": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Вудбург": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Ауззика": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Молния": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Лоэк": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Лоэкомы": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Булиэнна": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Маркиза": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Альпина": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Меч": {
+    "Рей": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Реймонд": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Тоги": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Даик": {
+    "Рей": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Реймонд": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Эльфийка": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Здоровяк": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Тоги": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Варвар": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Декан": {
+    "Рей": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Капитолис": {
+    "Рей": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Реймонд": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Императоры": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Вы": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Тоги": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Булиэнна": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Маркиза": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Юилия Хааман": {
+    "Рей": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Реймонд": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Вы": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Вудбург": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    }
+  },
+  "Вудбург": {
+    "Рей": {
+      "label": "cooc_sent",
+      "weight": 11,
+      "evidence": []
+    },
+    "Реймонд": {
+      "label": "cooc_scene",
+      "weight": 11,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 12,
+      "evidence": []
+    },
+    "Старик": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Эльфийка": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Здоровяк": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Императоры": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "Арчибальд Энур": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Вы": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 14,
+      "evidence": []
+    },
+    "Правящая Мать": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Тоги": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "Варвар": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Юилия Хааман": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Гильдия": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Арчер": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "Лик": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Эссенция Мана": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Зелье Восстановление": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Молния": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Лоэк": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Морда": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Гвурии": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Проганик": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Булиэнна": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Маркиза": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Альпина": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Сувор": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Мать": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    }
+  },
+  "Материбогиня": {
+    "Рей": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Реймонд": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Эльфийка": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Вы": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    }
+  },
+  "Жизнь": {
+    "Рей": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Реймонд": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Ауззик": {
+    "Рей": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Реймонд": {
+      "label": "cooc_sent",
+      "weight": 6,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Тоги": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Варвар": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Ауззика": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Лик": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Гвурии": {
+    "Рей": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Реймонд": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Императоры": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Вы": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 12,
+      "evidence": []
+    },
+    "Тоги": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Вудбург": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Лоэк Црум": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Артик Гвурии": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "Лоэк": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Проганик": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Альпина": {
+      "label": "cooc_sent",
+      "weight": 8,
+      "evidence": []
+    },
+    "Сувор": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Айка Реедящий": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Айка": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Артик": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Каменный Стена": {
+    "Рей": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Реймонд": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Гильдия": {
+    "Рей": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Реймонд": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Старик": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Варвар": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Вудбург": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Арчер": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Тарисса Раенный": {
+    "Рей": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Реймонд": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Арчибальд Энур": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Вы": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "Тоги": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Варвар": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Тарисса": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Лик": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Арчер": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Лик": {
+    "Рей": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "Реймонд": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "Эльфийка": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Здоровяк": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Тоги": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "Варвар": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "Вудбург": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Ауззик": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Тарисса Раенный": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Арчер": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Леди Раенный": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Ауззика": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Лоэк": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Лоэкомы": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Ауззика": {
+    "Рей": {
+      "label": "cooc_sent",
+      "weight": 5,
+      "evidence": []
+    },
+    "Реймонд": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Тоги": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Варвар": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Ауззик": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Лик": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Эон": {
+    "Рей": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Реймонд": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Тоги": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Эон Наалек": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Кайло": {
+      "label": "cooc_sent",
+      "weight": 5,
+      "evidence": []
+    },
+    "Эры Миля": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Лоэк": {
+      "label": "cooc_sent",
+      "weight": 3,
+      "evidence": []
+    },
+    "Эра": {
+      "label": "cooc_sent",
+      "weight": 2,
+      "evidence": []
+    }
+  },
+  "Волна": {
+    "Рей": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Реймонд": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Тоги": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Кайло": {
+    "Рей": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Реймонд": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Эон": {
+      "label": "cooc_sent",
+      "weight": 5,
+      "evidence": []
+    },
+    "Эон Наалек": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Эры Миля": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Палеогон": {
+      "label": "cooc_sent",
+      "weight": 2,
+      "evidence": []
+    }
+  },
+  "Эры Миля": {
+    "Рей": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Реймонд": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Тоги": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Эон": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Эон Наалек": {
+      "label": "cooc_sent",
+      "weight": 3,
+      "evidence": []
+    },
+    "Кайло": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Эссенция Мана": {
+    "Рей": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Реймонд": {
+      "label": "cooc_sent",
+      "weight": 5,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Здоровяк": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Тоги": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Варвар": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Вудбург": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Зелье Восстановление": {
+      "label": "cooc_sent",
+      "weight": 4,
+      "evidence": []
+    },
+    "Арчер": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Молния": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Зелье Восстановление": {
+    "Рей": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Реймонд": {
+      "label": "cooc_sent",
+      "weight": 5,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Тоги": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Варвар": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Вудбург": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Эссенция Мана": {
+      "label": "cooc_sent",
+      "weight": 4,
+      "evidence": []
+    },
+    "Арчер": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Молния": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Арчер": {
+    "Рей": {
+      "label": "cooc_sent",
+      "weight": 13,
+      "evidence": []
+    },
+    "Реймонд": {
+      "label": "cooc_scene",
+      "weight": 14,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 13,
+      "evidence": []
+    },
+    "Старик": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Императоры": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Вы": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Тракт": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "Тоги": {
+      "label": "cooc_scene",
+      "weight": 11,
+      "evidence": []
+    },
+    "Варвар": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "Вудбург": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "Гильдия": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Тарисса Раенный": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Лик": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Эссенция Мана": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Зелье Восстановление": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Леди Раенный": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Лоэк": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Булиэнна": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Маркиза": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Леди Раенный": {
+    "Рей": {
+      "label": "cooc_sent",
+      "weight": 3,
+      "evidence": []
+    },
+    "Реймонд": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Тоги": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Варвар": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Лик": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Арчер": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Молния": {
+    "Рей": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Реймонд": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Тоги": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Варвар": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Вудбург": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Эссенция Мана": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Зелье Восстановление": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Црум": {
+    "Рей": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Реймонд": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Тоги": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Лоэк Црум": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Лоэк": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Альпина": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Лоэк": {
+    "Рей": {
+      "label": "cooc_sent",
+      "weight": 24,
+      "evidence": []
+    },
+    "Реймонд": {
+      "label": "cooc_sent",
+      "weight": 9,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_sent",
+      "weight": 9,
+      "evidence": []
+    },
+    "Старик": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Здоровяк": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Вы": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_sent",
+      "weight": 9,
+      "evidence": []
+    },
+    "Тоги": {
+      "label": "cooc_sent",
+      "weight": 8,
+      "evidence": []
+    },
+    "Варвар": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Вудбург": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Лоэк Црум": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Гвурии": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Артик Гвурии": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Лик": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Эон": {
+      "label": "cooc_sent",
+      "weight": 3,
+      "evidence": []
+    },
+    "Арчер": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Црум": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Ростен": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Лоэкомы": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Альпина": {
+      "label": "cooc_sent",
+      "weight": 7,
+      "evidence": []
+    }
+  },
+  "Ростен": {
+    "Рей": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Реймонд": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_sent",
+      "weight": 3,
+      "evidence": []
+    },
+    "Тоги": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Лоэк": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Морда": {
+    "Рей": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Реймонд": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Вудбург": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Лоэкомы": {
+    "Рей": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Реймонд": {
+      "label": "cooc_sent",
+      "weight": 3,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Тоги": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Варвар": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Лик": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Лоэк": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Булиэнна": {
+    "Рей": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "Реймонд": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_sent",
+      "weight": 8,
+      "evidence": []
+    },
+    "Старик": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Императоры": {
+      "label": "cooc_scene",
+      "weight": 9,
+      "evidence": []
+    },
+    "Арчибальд Энур": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Матьбогиня": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Вы": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 11,
+      "evidence": []
+    },
+    "Правящая Мать": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Первый Император": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Тоги": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Варвар": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Капитолис": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Вудбург": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Арчер": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Маркиза": {
+      "label": "cooc_scene",
+      "weight": 11,
+      "evidence": []
+    },
+    "Таюс Понг": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Альпина": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "Просвиры": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Сувор": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Мать": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Реест": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Тарикус": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Маркиза": {
+    "Рей": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "Реймонд": {
+      "label": "cooc_sent",
+      "weight": 8,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "Старик": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Императоры": {
+      "label": "cooc_scene",
+      "weight": 10,
+      "evidence": []
+    },
+    "Вы": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 10,
+      "evidence": []
+    },
+    "Правящая Мать": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Первый Император": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Тоги": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Варвар": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Капитолис": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Вудбург": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Арчер": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Булиэнна": {
+      "label": "cooc_scene",
+      "weight": 11,
+      "evidence": []
+    },
+    "Таюс Понг": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Альпина": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "Просвиры": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Сувор": {
+      "label": "cooc_sent",
+      "weight": 8,
+      "evidence": []
+    },
+    "Мать": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Реест": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Тарикус": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Таюс Понг": {
+    "Рей": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Реймонд": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Вы": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Тоги": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Булиэнна": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Маркиза": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Альпина": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Альпина": {
+    "Рей": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "Реймонд": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Старик": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Императоры": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "Вы": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 13,
+      "evidence": []
+    },
+    "Правящая Мать": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Тоги": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "Варвар": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Вудбург": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Лоэк Црум": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Гвурии": {
+      "label": "cooc_sent",
+      "weight": 8,
+      "evidence": []
+    },
+    "Артик Гвурии": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Црум": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Лоэк": {
+      "label": "cooc_sent",
+      "weight": 7,
+      "evidence": []
+    },
+    "Булиэнна": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "Маркиза": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "Таюс Понг": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Просвиры": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Экзарх": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Сувор": {
+      "label": "cooc_sent",
+      "weight": 9,
+      "evidence": []
+    },
+    "Ростак Альпина": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Мать": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Артик": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Просвиры": {
+    "Рей": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Реймонд": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Тоги": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Булиэнна": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Маркиза": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Альпина": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    }
+  },
+  "Экзарх": {
+    "Рей": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Реймонд": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Тоги": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Альпина": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Сувор": {
+    "Рей": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Реймонд": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Императоры": {
+      "label": "cooc_sent",
+      "weight": 12,
+      "evidence": []
+    },
+    "Арчибальд Энур": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Вы": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_sent",
+      "weight": 9,
+      "evidence": []
+    },
+    "Правящая Мать": {
+      "label": "cooc_sent",
+      "weight": 9,
+      "evidence": []
+    },
+    "Первый Император": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Тоги": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Вудбург": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Гвурии": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Булиэнна": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Маркиза": {
+      "label": "cooc_sent",
+      "weight": 8,
+      "evidence": []
+    },
+    "Альпина": {
+      "label": "cooc_sent",
+      "weight": 9,
+      "evidence": []
+    },
+    "Ростак Альпина": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Мать": {
+      "label": "cooc_sent",
+      "weight": 6,
+      "evidence": []
+    },
+    "Тарикус": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Анции": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    }
+  },
+  "Леди": {
+    "Рей": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Реймонд": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Джорека": {
+    "Рей": {
+      "label": "cooc_sent",
+      "weight": 2,
+      "evidence": []
+    },
+    "Трен": {
+      "label": "cooc_sent",
+      "weight": 4,
+      "evidence": []
+    }
+  },
+  "Зыбучая Ловушка": {
+    "Рей": {
+      "label": "cooc_sent",
+      "weight": 2,
+      "evidence": []
+    }
+  },
+  "Кенштайны": {
+    "Реймонд": {
+      "label": "cooc_sent",
+      "weight": 2,
+      "evidence": []
+    }
+  },
+  "Родич": {
+    "Реймонд": {
+      "label": "cooc_sent",
+      "weight": 2,
+      "evidence": []
+    }
+  },
+  "Громила": {
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Арчибальд": {
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Старик": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Эльфийка": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Здоровяк": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Императоры": {
+      "label": "cooc_sent",
+      "weight": 6,
+      "evidence": []
+    },
+    "Арчибальд Энур": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_sent",
+      "weight": 9,
+      "evidence": []
+    },
+    "Архимаг": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Клык": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Ваш Величество": {
+      "label": "cooc_sent",
+      "weight": 3,
+      "evidence": []
+    },
+    "Август": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Кольцо": {
+      "label": "cooc_sent",
+      "weight": 2,
+      "evidence": []
+    },
+    "Марцелла": {
+      "label": "cooc_sent",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Архимаг": {
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Здоровяк": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Императоры": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Арчибальд Энур": {
+      "label": "cooc_sent",
+      "weight": 5,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Правящая Мать": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Август Четвёртый": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Арчибальд": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Она": {
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Пол": {
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Здоровяк": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Реест": {
+    "Юиль": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Императоры": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Булиэнна": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Маркиза": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Совиный Взор": {
+    "Юиль": {
+      "label": "cooc_sent",
+      "weight": 2,
+      "evidence": []
+    }
+  },
+  "Бодрянка": {
+    "Юиль": {
+      "label": "cooc_sent",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Правящая Мать": {
+    "Старик": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Императоры": {
+      "label": "cooc_sent",
+      "weight": 11,
+      "evidence": []
+    },
+    "Арчибальд Энур": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Вы": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Первый Император": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Архимаг": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Империя": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Альпина": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Булиэнна": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Сувор": {
+      "label": "cooc_sent",
+      "weight": 9,
+      "evidence": []
+    },
+    "Маркиза": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Ростак Альпина": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Мать": {
+      "label": "cooc_sent",
+      "weight": 7,
+      "evidence": []
+    },
+    "Вудбург": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Тарикус": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Анции": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    }
+  },
+  "Август Четвёртый": {
+    "Императоры": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Архимаг": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Август Седьмая": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Август": {
+    "Императоры": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_sent",
+      "weight": 6,
+      "evidence": []
+    },
+    "Арчибальд": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Ваш Величество": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Август Седьмая": {
+    "Императоры": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Август Четвёртый": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Ростак Альпина": {
+    "Императоры": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Правящая Мать": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Альпина": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Сувор": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Мать": {
+    "Императоры": {
+      "label": "cooc_sent",
+      "weight": 7,
+      "evidence": []
+    },
+    "Арчибальд Энур": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Правящая Мать": {
+      "label": "cooc_sent",
+      "weight": 7,
+      "evidence": []
+    },
+    "Вудбург": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Булиэнна": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Маркиза": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Альпина": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Сувор": {
+      "label": "cooc_sent",
+      "weight": 6,
+      "evidence": []
+    },
+    "Анции": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Тарикус": {
+    "Императоры": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Правящая Мать": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Первый Император": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Булиэнна": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Маркиза": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Сувор": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Анции": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Он Величество": {
+    "Императоры": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Ваш Величество": {
+    "Императоры": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Арчибальд": {
+      "label": "cooc_sent",
+      "weight": 3,
+      "evidence": []
+    },
+    "Август": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Клык": {
+    "Императоры": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Арчибальд": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Анции": {
+    "Императоры": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Правящая Мать": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Сувор": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Мать": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Тарикус": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Легат": {
+    "Императоры": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Артик Гвурии": {
+    "Императоры": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Вы": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Лоэк Црум": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Гвурии": {
+      "label": "cooc_scene",
+      "weight": 7,
+      "evidence": []
+    },
+    "Лоэк": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Айка Реедящий": {
+      "label": "cooc_sent",
+      "weight": 3,
+      "evidence": []
+    },
+    "Альпина": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Артик": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Лоэк Црум": {
+    "Вы": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 8,
+      "evidence": []
+    },
+    "Гвурии": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Артик Гвурии": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Црум": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Лоэк": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    },
+    "Альпина": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    }
+  },
+  "Тарисса": {
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Тарисса Раенный": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Эон Наалек": {
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Эон": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Кайло": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Эры Миля": {
+      "label": "cooc_sent",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Проганик": {
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 6,
+      "evidence": []
+    },
+    "Вудбург": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Гвурии": {
+      "label": "cooc_scene",
+      "weight": 5,
+      "evidence": []
+    }
+  },
+  "Академия": {
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Айка Реедящий": {
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Гвурии": {
+      "label": "cooc_scene",
+      "weight": 4,
+      "evidence": []
+    },
+    "Артик Гвурии": {
+      "label": "cooc_sent",
+      "weight": 3,
+      "evidence": []
+    },
+    "Айка": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Айка": {
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Гвурии": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Айка Реедящий": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Фельдмаршальский Жезл": {
+    "Далее Энур": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Марцелла": {
+    "Далее Энур": {
+      "label": "cooc_sent",
+      "weight": 2,
+      "evidence": []
+    },
+    "Арчибальд": {
+      "label": "cooc_sent",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Кольцо": {
+    "Арчибальд": {
+      "label": "cooc_sent",
+      "weight": 2,
+      "evidence": []
+    }
+  },
+  "Артик": {
+    "Гвурии": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Артик Гвурии": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    },
+    "Альпина": {
+      "label": "cooc_scene",
+      "weight": 3,
+      "evidence": []
+    }
+  },
+  "Эра": {
+    "Эон": {
+      "label": "cooc_sent",
+      "weight": 2,
+      "evidence": []
+    }
+  },
+  "Палеогон": {
+    "Кайло": {
+      "label": "cooc_sent",
+      "weight": 2,
+      "evidence": []
+    }
+  },
+  "Трен": {
+    "Джорека": {
+      "label": "cooc_sent",
+      "weight": 4,
+      "evidence": []
+    }
+  }
+}

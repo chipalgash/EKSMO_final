@@ -210,8 +210,5 @@ __marimo__/
 __pycache__/
 *.pyc
 .DS_Store
-extracted_texts/
-preprocessed_texts/
-postprocessed/
-ner_outputs/
+
 
