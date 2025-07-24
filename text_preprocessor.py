@@ -1,89 +1,203 @@
+# text_preprocessor.py
+from __future__ import annotations
 import re
+import json
 from pathlib import Path
-from natasha import Segmenter, Doc
-from pymorphy2 import MorphAnalyzer
+from typing import Dict, Any, List
 from loguru import logger
 
-segmenter = Segmenter()
-morph = MorphAnalyzer()
+# быстрая русская сегментация предложений
+try:
+    from razdel import sentenize
+except ImportError:
+    sentenize = None
+
+# лемматизация (опционально)
+try:
+    from pymorphy3 import MorphAnalyzer
+    morph = MorphAnalyzer()
+except Exception:
+    morph = None
 
 
-def clean_text(text: str) -> str:
-    text = re.sub(r'\s+', ' ', text)
-    text = re.sub(r'[\u00ad\-­]', '', text)  # soft hyphen + обычный дефис
-    text = text.replace('«', '"').replace('»', '"')
-    logger.info("Текст очищен от лишних символов.")
-    return text.strip()
+# ----------------- API для run_book ----------------- #
+def run_stage(paths: Dict[str, Path], cfg: Dict[str, Any]):
+    """
+    paths: словарь путей (см. PathManager.as_dict())
+    cfg:
+        force: bool – пересчитать, даже если файл есть
+        normalize: bool – делать лемматизацию
+        min_sent_len: int – отсекать «предложения» короче n символов
+    """
+    book_id = paths["book_id"]
+    in_dir = paths["extracted"]
+    out_dir = paths["preprocessed"]
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    force = cfg.get("force", False)
+    do_norm = cfg.get("normalize", False)
+    min_len = cfg.get("min_sent_len", 3)
+
+    out_path = out_dir / f"{book_id}_preprocessed.json"
+    if out_path.exists() and not force:
+        logger.info(f"[preprocess] {out_path.name} уже существует, пропускаю.")
+        return
+
+    # исходники
+    txt_path = in_dir / f"{book_id}.txt"
+    struct_path = in_dir / f"{book_id}_structured.json"
+
+    if struct_path.exists():
+        logger.info("[preprocess] Использую структурированный ввод (главы/сцены).")
+        structured = json.loads(struct_path.read_text("utf-8"))
+        result = preprocess_structured(structured, do_norm, min_len)
+    elif txt_path.exists():
+        logger.info("[preprocess] Использую плоский txt.")
+        text = txt_path.read_text("utf-8")
+        result = preprocess_flat(text, do_norm, min_len)
+    else:
+        logger.error(f"[preprocess] Нет входных файлов в {in_dir}")
+        return
+
+    out_path.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
+    logger.info(f"[preprocess] Сохранено → {out_path}")
 
 
-def tokenize_sentences(text: str) -> list:
-    doc = Doc(text)
-    doc.segment(segmenter)
-    sentences = [sent.text for sent in doc.sents if sent.text]
-    logger.info(f"Текст токенизирован на {len(sentences)} предложений.")
-    return sentences
+# ----------------- Основная логика ----------------- #
+def preprocess_structured(structured: List[Dict[str, Any]], do_norm: bool, min_len: int) -> Dict[str, Any]:
+    """
+    structured: список глав [{title, scenes:[{id, text}]}]
+    Возвращает единый JSON:
+    {
+      "book_id": ...,
+      "chapters": [
+        {"id": 1, "title": "...", "scenes":[
+           {"id": 1, "text": "...", "sentences":[{"id":0,"text":"...","norm":"..."}]}
+        ]}
+      ],
+      "flat_sentences": [...]
+    }
+    """
+    chapters_out = []
+    flat_sentences = []
+    sent_global_id = 0
 
+    for ch_id, ch in enumerate(structured, start=1):
+        ch_title = ch.get("title", f"Глава {ch_id}")
+        scenes_out = []
+        for sc in ch.get("scenes", []):
+            sc_id = sc.get("id", len(scenes_out) + 1)
+            scene_text = sc.get("text", "")
+            scene_text = clean_text(scene_text)
+            sent_list = split_sentences(scene_text, min_len)
 
-def normalize_text(text: str) -> str:
-    tokens = re.findall(r'\w+', text.lower())
-    normalized_tokens = [morph.parse(token)[0].normal_form for token in tokens]
-    normalized_text = ' '.join(normalized_tokens)
-    logger.info("Текст нормализован (лемматизирован).")
-    return normalized_text
+            sent_objs = []
+            for idx, s in enumerate(sent_list):
+                norm = normalize_sentence(s) if do_norm else ""
+                sent_obj = {"id": idx, "text": s}
+                if do_norm:
+                    sent_obj["norm"] = norm
+                sent_objs.append(sent_obj)
 
+                flat_sentences.append({
+                    "global_id": sent_global_id,
+                    "chapter": ch_id,
+                    "scene": sc_id,
+                    "text": s,
+                    **({"norm": norm} if do_norm else {})
+                })
+                sent_global_id += 1
 
-def preprocess_text(text: str) -> dict:
-    cleaned = clean_text(text)
-    sentences = tokenize_sentences(cleaned)
-    normalized = normalize_text(cleaned)
+            scenes_out.append({"id": sc_id, "text": scene_text, "sentences": sent_objs})
+
+        chapters_out.append({"id": ch_id, "title": ch_title, "scenes": scenes_out})
 
     return {
-        "cleaned_text": cleaned,
-        "sentences": sentences,
-        "normalized_text": normalized
+        "chapters": chapters_out,
+        "flat_sentences": flat_sentences
     }
 
 
-def process_segmented_file(filepath: Path, output_dir: Path):
-    with filepath.open('r', encoding='utf-8') as file:
-        content = file.read()
+def preprocess_flat(text: str, do_norm: bool, min_len: int) -> Dict[str, Any]:
+    """
+    Для случая, когда нет структуры глав/сцен.
+    """
+    text = clean_text(text)
+    sent_list = split_sentences(text, min_len)
 
-    segments = re.split(r"(={5,} Глава .+? ={5,})", content)[1:]  # Сплит на главы
-    structured_output = {}
+    flat_sentences = []
+    for i, s in enumerate(sent_list):
+        entry = {"global_id": i, "text": s}
+        if do_norm:
+            entry["norm"] = normalize_sentence(s)
+        flat_sentences.append(entry)
 
-    for i in range(0, len(segments), 2):
-        chapter_title = segments[i].strip('=').strip()
-        chapter_content = segments[i+1]
-
-        scenes = re.split(r"(-{5,} Сцена .+? -{5,})", chapter_content)[1:]
-        structured_output[chapter_title] = {}
-
-        for j in range(0, len(scenes), 2):
-            scene_title = scenes[j].strip('-').strip()
-            scene_text = scenes[j+1].strip()
-
-            preprocessed = preprocess_text(scene_text)
-
-            structured_output[chapter_title][scene_title] = preprocessed
-
-    save_preprocessed(structured_output, filepath.stem, output_dir)
-
-
-def save_preprocessed(data: dict, filename: str, output_dir: Path):
-    output_dir.mkdir(exist_ok=True)
-
-    output_file = output_dir / f"{filename}_preprocessed.json"
-    import json
-    with output_file.open("w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=4)
-
-    logger.info(f"Предобработанный текст сохранен в '{output_file}'")
+    # всё в одной «главе» и одной «сцене»
+    return {
+        "chapters": [{
+            "id": 1,
+            "title": "Текст",
+            "scenes": [{
+                "id": 1,
+                "text": text,
+                "sentences": [
+                    {"id": i, "text": s, **({"norm": flat_sentences[i]['norm']} if do_norm else {})}
+                    for i, s in enumerate(sent_list)
+                ]
+            }]
+        }],
+        "flat_sentences": flat_sentences
+    }
 
 
-if __name__ == "__main__":
-    extracted_dir = Path("extracted_texts")
-    preprocessed_dir = Path("preprocessed_texts")
+# ----------------- Вспомогательные функции ----------------- #
+CLEAN_REPS = [
+    (r"\s+", " "),               # многократные пробелы
+    (r"[\u200b\u200e\uFEFF]", ""),  # скрытые юникод-символы
+]
 
-    for filepath in extracted_dir.glob("*.txt"):
-        logger.info(f"Обрабатывается файл '{filepath}'")
-        process_segmented_file(filepath, preprocessed_dir)
+def clean_text(text: str) -> str:
+    text = text.replace("\xa0", " ").replace("\t", " ")
+    for pat, repl in CLEAN_REPS:
+        text = re.sub(pat, repl, text)
+    return text.strip()
+
+
+def split_sentences(text: str, min_len: int) -> List[str]:
+    """
+    Разбивает на предложения. Если razdel не установлен — fallback простой точечной эвристикой.
+    """
+    sents: List[str] = []
+    if sentenize:
+        for s in sentenize(text):
+            t = s.text.strip()
+            if len(t) >= min_len:
+                sents.append(t)
+    else:
+        # грубая эвристика
+        parts = re.split(r"(?<=[.!?…])\s+", text)
+        for p in parts:
+            p = p.strip()
+            if len(p) >= min_len:
+                sents.append(p)
+    return sents
+
+
+WORD_RE = re.compile(r"[А-Яа-яA-Za-zЁё']+")
+
+def normalize_sentence(sent: str) -> str:
+    """
+    Очень простая лемматизация: токенизируем слова, лемматизируем pymorphy3,
+    собираем обратно строку. Если morph нет — возвращаем исходное предложение.
+    """
+    if morph is None:
+        return sent
+    tokens = WORD_RE.findall(sent)
+    lemmas = []
+    for tok in tokens:
+        p = morph.parse(tok)
+        if p:
+            lemmas.append(p[0].normal_form)
+        else:
+            lemmas.append(tok.lower())
+    return " ".join(lemmas)
