@@ -112,8 +112,8 @@ class FredSummarizer:
     def __init__(self, model_name: str, device: str):
         logger.info(f"Loading FRED‑T5 '{model_name}' on {device}")
         self.tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
-        self.model = AutoModelForSeq2SeqLM.from_pretrained(model_name).to(device)
-        self.device = device
+        self.model     = AutoModelForSeq2SeqLM.from_pretrained(model_name).to(device)
+        self.device    = device
 
     @torch.inference_mode()
     def generate(self, prompt: str, max_input_tokens: int, max_gen_tokens: int) -> str:
@@ -133,10 +133,10 @@ class FredSummarizer:
 
 # -------------------- STAGE --------------------
 def run_stage(paths: Dict[str, Path], cfg: Dict[str, Any]) -> None:
-    book_id = paths["book_root"].name
-    ctx_path = paths["contexts_dir"] / f"{book_id}_contexts.json"
+    book_id  = paths["book_root"].name
+    ctx_path = paths["contexts_dir"]  / f"{book_id}_contexts.json"
     rel_path = paths["relations_dir"] / f"{book_id}_relationships.json"
-    out_dir = paths["summary_dir"]
+    out_dir  = paths["summary_dir"]
     out_dir.mkdir(parents=True, exist_ok=True)
 
     summ_cfg   = cfg.get("summary", {})
@@ -155,15 +155,26 @@ def run_stage(paths: Dict[str, Path], cfg: Dict[str, Any]) -> None:
     else:
         raise ValueError(f"Unsupported summary model: {model_type}")
 
-    # загрузка контекстов
+    # загрузка контекстов (поддерживаем dict и list)
     if not ctx_path.exists():
         logger.error(f"[summary] Contexts not found: {ctx_path}")
         return
-    contexts = json.loads(ctx_path.read_text(encoding="utf-8"))
+    raw_ctx = json.loads(ctx_path.read_text(encoding="utf-8"))
+
+    if isinstance(raw_ctx, dict):
+        items = raw_ctx.items()
+    elif isinstance(raw_ctx, list):
+        items = []
+        for idx, ent in enumerate(raw_ctx):
+            cid = str(ent.get("id", ent.get("entity_id", idx)))
+            items.append((cid, ent))
+    else:
+        logger.error(f"[summary] Unexpected contexts format: {type(raw_ctx)}")
+        return
 
     # генерируем summary персонажей
     characters_out: Dict[str, Any] = {}
-    for cid, ent in contexts.items():
+    for cid, ent in items:
         name   = ent.get("norm", "")
         events = ent.get("events", [])[:max_events]
         if not events:
@@ -178,7 +189,7 @@ def run_stage(paths: Dict[str, Path], cfg: Dict[str, Any]) -> None:
         merged = {"biography": "", "traits": [], "timeline": [], "story_summary": ""}
         for chunk in chunks:
             prompt = PROMPT_TEMPLATE.format(sys=SYS_INSTR, name=name, context=chunk)
-            raw = summarizer.generate(prompt, max_input, max_gen)
+            raw    = summarizer.generate(prompt, max_input, max_gen)
             try:
                 piece = safe_parse_json(raw)
             except Exception as e:
@@ -187,10 +198,7 @@ def run_stage(paths: Dict[str, Path], cfg: Dict[str, Any]) -> None:
             merge_piece(merged, piece)
         post_clean(merged)
 
-        characters_out[cid] = {
-            "name": name,
-            **merged
-        }
+        characters_out[cid] = {"name": name, **merged}
 
     # сохраняем результаты персонажей
     char_path = out_dir / f"{book_id}_characters_summary.json"
@@ -202,11 +210,11 @@ def run_stage(paths: Dict[str, Path], cfg: Dict[str, Any]) -> None:
 
     # опционально: summary всей книги
     if save_book:
-        combined = "\n".join(f"{v['name']}: {v['biography']}" for v in characters_out.values())
+        combined    = "\n".join(f"{v['name']}: {v['biography']}" for v in characters_out.values())
         book_prompt = "Общая история книги через призму персонажей:\n\n" + combined
-        book_raw = summarizer.generate(book_prompt, max_input * 2, max_gen)
+        book_raw    = summarizer.generate(book_prompt, max_input * 2, max_gen)
         try:
-            book_j = safe_parse_json(book_raw)
+            book_j      = safe_parse_json(book_raw)
             book_summary = book_j.get("story_summary", book_j.get("biography", "")).strip()
         except Exception:
             book_summary = book_raw.strip()
