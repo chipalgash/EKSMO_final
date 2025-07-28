@@ -1,222 +1,201 @@
-# relationships_extractor.py
+# -*- coding: utf-8 -*-
+"""
+Stage relations: extraction и постобработка связей персонажей.
+Чтение:
+  50_coref/<book_id>_coref.json
+  50_coref/<book_id>_mentions_index.json
+  20_preprocessed/<book_id>_preprocessed.json
+Запись:
+  60_relations/<book_id>_relations_raw.json
+  60_relations/<book_id>_relationships.json
+"""
 from __future__ import annotations
+from pathlib import Path
+from typing import Any, Dict, List, Tuple
 import json
 import re
-from pathlib import Path
-from typing import Dict, List, Tuple, Any
 from loguru import logger
 
-# ==== настройки ====
-BOOK_ID = "633450"
-POSTPROC_DIR = Path("postprocessed")
-PREPROC_DIR = Path("preprocessed_texts")
-USE_SPACY = False  # опционально (ru_core_news_lg)
-
-# Социальные/родственные роли для регексов
-ROLE_WORDS = r"(брат|сестра|жена|муж|сын|дочь|отец|мать|родитель|друг|подруга|коллега|начальник|менеджер|шеф|подчинённый|жених|невеста|товарищ)"
-# Шаблоны
-REL_PATTERNS = [
-    # «А — брат B», «А – жена B»
-    rf"(?P<a>[А-ЯЁ][а-яё]+(?:\s[А-ЯЁ][а-яё]+)*)\s*[–—-]\s*(?P<label>{ROLE_WORDS})\s+(?P<b>[А-ЯЁ][а-яё]+(?:\s[А-ЯЁ][а-яё]+)*)",
-    # «А это брат B»
-    rf"(?P<a>[А-ЯЁ][а-яё]+(?:\s[А-ЯЁ][а-яё]+)*)\s+(?:это|есть)\s+(?P<label>{ROLE_WORDS})\s+(?P<b>[А-ЯЁ][а-яё]+(?:\s[А-ЯЁ][а-яё]+)*)",
-    # «Брат А по отношению к B» (обратный порядок)
-    rf"(?P<label>{ROLE_WORDS})\s+(?P<a>[А-ЯЁ][а-яё]+(?:\s[А-ЯЁ][а-яё]+)*)\s+(?:для|по отношению к)\s+(?P<b>[А-ЯЁ][а-яё]+(?:\s[А-ЯЁ][а-яё]+)*)",
-]
-
-# ==== утилиты ====
+# === Вспомогательные функции ===
 
 def load_json(p: Path) -> Any:
-    with p.open("r", encoding="utf-8") as f:
-        return json.load(f)
+    return json.loads(p.read_text(encoding="utf-8"))
 
-def save_json(obj: Any, p: Path):
-    with p.open("w", encoding="utf-8") as f:
-        json.dump(obj, f, ensure_ascii=False, indent=2)
+
+def save_json(obj: Any, p: Path) -> None:
+    p.parent.mkdir(parents=True, exist_ok=True)
+    p.write_text(json.dumps(obj, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def build_scene_texts(preproc: dict) -> Dict[Tuple[str, str], dict]:
+    """
+    Строит словарь: (chapter_id, scene_id) -> { 'text', 'sentences', 'offsets' }
+    Использует структуру preproc['chapters'] (список глав).
+    """
+    texts: Dict[Tuple[str, str], dict] = {}
+    for ch in preproc.get('chapters', []):
+        ch_id = str(ch.get('id'))
+        for sc in ch.get('scenes', []):
+            sc_id = str(sc.get('id'))
+            text = sc.get('text') or " ".join(s.get('text', '') for s in sc.get('sentences', []))
+            sentences = [s.get('text', '') for s in sc.get('sentences', [])]
+            offsets: List[Tuple[int, int]] = []
+            pos = 0
+            for sent in sentences:
+                idx = text.find(sent, pos)
+                if idx < 0:
+                    idx = pos
+                offsets.append((idx, idx + len(sent)))
+                pos = idx + len(sent)
+            texts[(ch_id, sc_id)] = {
+                'text': text,
+                'sentences': sentences,
+                'offsets': offsets
+            }
+    return texts
+
+
+def build_mentions_index(chars: Dict[str, dict]) -> Dict[Tuple[str, str], Dict[int, List[str]]]:
+    idx: Dict[Tuple[str, str], Dict[int, List[str]]] = {}
+    for cid, obj in chars.items():
+        for m in obj.get('mentions', []):
+            ch = str(m.get('chapter'))
+            sc = str(m.get('scene'))
+            sid = m.get('sent_id')
+            if sid is None:
+                continue
+            idx.setdefault((ch, sc), {}).setdefault(sid, []).append(cid)
+    return idx
+
+
+def cooc_counts_scene(chars: Dict[str, dict]) -> Dict[str, Dict[str, int]]:
+    scene_chars: Dict[Tuple[str, str], set] = {}
+    for cid, obj in chars.items():
+        for m in obj.get('mentions', []):
+            key = (str(m.get('chapter')), str(m.get('scene')))
+            scene_chars.setdefault(key, set()).add(cid)
+    graph: Dict[str, Dict[str, int]] = {}
+    for ids in scene_chars.values():
+        for a in ids:
+            for b in ids:
+                if a == b:
+                    continue
+                graph.setdefault(a, {}).setdefault(b, 0)
+                graph[a][b] += 1
+    return graph
+
+
+def cooc_counts_sent(mentions_idx: Dict[Tuple[str, str], Dict[int, List[str]]]) -> Dict[str, Dict[str, int]]:
+    graph: Dict[str, Dict[str, int]] = {}
+    for sent_map in mentions_idx.values():
+        for ids in sent_map.values():
+            unique = set(ids)
+            for a in unique:
+                for b in unique:
+                    if a == b:
+                        continue
+                    graph.setdefault(a, {}).setdefault(b, 0)
+                    graph[a][b] += 1
+    return graph
+
 
 def find_char_by_name(name: str, chars: Dict[str, dict]) -> str | None:
-    """Поиск персонажа по норме/алиасу (без учета регистра)."""
     low = name.lower()
     for cid, data in chars.items():
-        if data["norm"].lower() == low:
-            return cid
-        if any(low == a.lower() for a in data["aliases"]):
+        if data.get('norm', '').lower() == low or any(low == a.lower() for a in data.get('aliases', [])):
             return cid
     return None
 
-def build_scene_texts(preproc_book: dict) -> Dict[Tuple[str,str], dict]:
-    """map (chapter, scene) -> {text, sentences, offsets}"""
-    res = {}
-    for ch, scenes in preproc_book.items():
-        for sc, data in scenes.items():
-            text = data["cleaned_text"]
-            sentences = data.get("sentences") or []
-            offsets = []
-            if sentences:
-                # если в препроцессоре не сохранили offsets — посчитаем
-                pos = 0
-                for s in sentences:
-                    idx = text.find(s, pos)
-                    offsets.append((idx, idx+len(s)))
-                    pos = idx + len(s)
-            res[(ch, sc)] = {
-                "text": text,
-                "sentences": sentences,
-                "offsets": offsets
-            }
-    return res
+# шаблоны для извлечения отношений через regex
+ROLE_WORDS = r"(брат|сестра|жена|муж|сын|дочь|отец|мать|родитель|друг|подруга|коллега|начальник|менеджер|шеф|подчинённый|жених|невеста|товарищ)"
+REL_PATTERNS = [
+    rf"(?P<a>[А-ЯЁ][а-яё]+(?:\s[А-ЯЁ][а-яё]+)*)\s*[–—-]\s*(?P<label>{ROLE_WORDS})\s+(?P<b>[А-ЯЁ][а-яё]+(?:\s[А-ЯЁ][а-яё]+)*)",
+    rf"(?P<a>[А-ЯЁ][а-яё]+(?:\s[А-ЯЁ][а-яё]+)*)\s+(?:это|есть)\s+(?P<label>{ROLE_WORDS})\s+(?P<b>[А-ЯЁ][а-яё]+(?:\s[А-ЯЁ][а-яё]+)*)",
+    rf"(?P<label>{ROLE_WORDS})\s+(?P<a>[А-ЯЁ][а-яё]+(?:\s[А-ЯЁ][а-яё]+)*)\s+(?:для|по\sотношению\sк)\s+(?P<b>[А-ЯЁ][а-яё]+(?:\s[А-ЯЁ][а-яё]+)*)",
+]
 
-def build_mentions_index(chars: Dict[str, dict]) -> Dict[Tuple[str,str], Dict[int, List[str]]]:
-    """
-    Вернём структуру: {(ch,sc): {sent_id: [char_ids...]}}
-    чтобы быстро считать ко-упоминания по предложениям.
-    """
-    idx: Dict[Tuple[str,str], Dict[int, List[str]]] = {}
-    for cid, obj in chars.items():
-        for m in obj["mentions"]:
-            ch = str(m.get("chapter"))
-            sc = str(m.get("scene"))
-            sid = m.get("sent_id")
-            if sid is None:
-                continue
-            key = (ch, sc)
-            idx.setdefault(key, {}).setdefault(sid, []).append(cid)
-    return idx
 
-def cooc_counts_scene(chars: Dict[str, dict]) -> Dict[str, Dict[str, int]]:
-    """Ко-упоминания по сценам."""
-    scene_chars: Dict[Tuple[str,str], set] = {}
-    for cid, obj in chars.items():
-        for m in obj["mentions"]:
-            key = (str(m["chapter"]), str(m["scene"]))
-            scene_chars.setdefault(key, set()).add(cid)
-    graph: Dict[str, Dict[str, int]] = {}
-    for _, ids in scene_chars.items():
-        ids = list(ids)
-        for i, a in enumerate(ids):
-            for b in ids[i+1:]:
-                graph.setdefault(a, {}).setdefault(b, 0)
-                graph.setdefault(b, {}).setdefault(a, 0)
-                graph[a][b] += 1
-                graph[b][a] += 1
-    return graph
-
-def cooc_counts_sent(mentions_idx: Dict[Tuple[str,str], Dict[int, List[str]]]) -> Dict[str, Dict[str, int]]:
-    """Ко-упоминания по предложениям."""
-    graph: Dict[str, Dict[str, int]] = {}
-    for _, sent_map in mentions_idx.items():
-        for _, ids in sent_map.items():
-            unique = list(set(ids))
-            for i, a in enumerate(unique):
-                for b in unique[i+1:]:
-                    graph.setdefault(a, {}).setdefault(b, 0)
-                    graph.setdefault(b, {}).setdefault(a, 0)
-                    graph[a][b] += 1
-                    graph[b][a] += 1
-    return graph
-
-def extract_regex_relations(scene_texts: Dict[Tuple[str,str], dict],
-                            chars: Dict[str, dict]) -> List[dict]:
-    """Поиск ролей по заранее заданным регекс-паттернам."""
-    found = []
+def extract_regex_relations(scene_texts: Dict[Tuple[str, str], dict], chars: Dict[str, dict]) -> List[dict]:
+    found: List[dict] = []
     for (ch, sc), obj in scene_texts.items():
-        txt = obj["text"]
+        txt = obj['text']
         for pat in REL_PATTERNS:
             for m in re.finditer(pat, txt):
-                a_name = m.group("a")
-                b_name = m.group("b")
-                label  = m.group("label")
-                ca = find_char_by_name(a_name, chars)
-                cb = find_char_by_name(b_name, chars)
+                ca = find_char_by_name(m.group('a'), chars)
+                cb = find_char_by_name(m.group('b'), chars)
                 if ca and cb:
                     found.append({
-                        "a": ca,
-                        "b": cb,
-                        "label": label,
-                        "chapter": ch,
-                        "scene": sc,
-                        "span": [m.start(), m.end()],
-                        "evidence_text": txt[m.start():m.end()]
+                        'a': ca, 'b': cb,
+                        'label': m.group('label'),
+                        'chapter': ch, 'scene': sc,
+                        'span': [m.start(), m.end()],
+                        'evidence_text': txt[m.start():m.end()]
                     })
     return found
 
-# ==== основной пайплайн ====
+# === Основная стадия ===
 
-def main(book_id: str = BOOK_ID):
-    # загрузка данных
-    chars_path = POSTPROC_DIR / f"{book_id}_characters_coref_patched.json"
-    if not chars_path.exists():
-        # fallback: без патча
-        chars_path = POSTPROC_DIR / f"{book_id}_characters_coref.json"
-    pre_path = PREPROC_DIR / f"{book_id}_preprocessed.json"
+def run_stage(paths: Dict[str, Path], cfg: Dict[str, Any]) -> None:
+    book_id = paths['book_root'].name
+    coref_path = paths['coref_dir'] / f"{book_id}_coref.json"
+    idx_path = paths['coref_dir'] / f"{book_id}_mentions_index.json"
+    prep_path = paths['preprocess_dir'] / f"{book_id}_preprocessed.json"
 
-    chars = load_json(chars_path)
-    pre = load_json(pre_path)
+    out_dir = paths['relations_dir']; out_dir.mkdir(parents=True, exist_ok=True)
+    raw_path = out_dir / f"{book_id}_relations_raw.json"
+    final_path = out_dir / f"{book_id}_relationships.json"
 
-    # строим карты
-    scene_texts = build_scene_texts(pre)
+    if raw_path.exists() and final_path.exists() and not cfg.get('force', False):
+        logger.info(f"[relations] Есть результаты, пропускаю: {final_path.name}")
+        return
+
+    # Загрузка данных
+    chars_data = load_json(coref_path)['entities']
+    chars = {str(ent['id']): ent for ent in chars_data}
     mentions_idx = build_mentions_index(chars)
+    preproc = load_json(prep_path)
 
-    # 1) ко-упоминания
-    graph_scene = cooc_counts_scene(chars)
-    graph_sent = cooc_counts_sent(mentions_idx)
+    # Построение промежуточных структур
+    scene_texts = build_scene_texts(preproc)
+    scene_cooc = cooc_counts_scene(chars)
+    sent_cooc = cooc_counts_sent(mentions_idx)
+    regex_rel = extract_regex_relations(scene_texts, chars) if cfg.get('regex_roles', True) else []
 
-    # 2) регексы
-    regex_edges = extract_regex_relations(scene_texts, chars)
+    # Сохранение «сырых» результатов
+    raw = {'cooc_scene': scene_cooc, 'cooc_sent': sent_cooc, 'regex_relations': regex_rel}
+    save_json(raw, raw_path)
+    logger.info(f"[relations] Raw saved → {raw_path.name}")
 
-    # 3) (опционально) spaCy  парсинг зависимостной — можно добавить позже
-    # if USE_SPACY:
-    #     import spacy
-    #     nlp = spacy.load("ru_core_news_lg")
-    #     # TODO: добавить паттерны с Matcher/DependencyMatcher
+    # Постобработка
+    scene_thr = cfg.get('scene_min_cooccurs', 2)
+    sent_thr = cfg.get('sent_min_cooccurs', 1)
+    edges: Dict[str, Dict[str, Any]] = {}
 
-    # 4) агрегируем в единый список рёбер
-    edges = []
-    # ко-упоминания (сцены)
-    for a, neigh in graph_scene.items():
+    # cooc_scene
+    for a, neigh in scene_cooc.items():
         for b, w in neigh.items():
-            edge = {
-                "a": a, "b": b,
-                "label": "cooc_scene",
-                "weight": w,
-                "evidence": []  # можно позже добавить список сцен
-            }
-            edges.append(edge)
-    # ко-упоминания (предложения)
-    for a, neigh in graph_sent.items():
+            if w >= scene_thr:
+                edges.setdefault(a, {}).setdefault(b, {'label': 'cooc_scene', 'weight': 0, 'evidence': []})
+                edges[a][b]['weight'] = max(edges[a][b]['weight'], w)
+
+    # cooc_sent
+    for a, neigh in sent_cooc.items():
         for b, w in neigh.items():
-            edges.append({
-                "a": a, "b": b,
-                "label": "cooc_sent",
-                "weight": w,
-                "evidence": []
-            })
-    # регексы
-    for r in regex_edges:
-        edges.append({
-            "a": r["a"], "b": r["b"],
-            "label": r["label"],
-            "weight": 1,
-            "evidence": [{
-                "chapter": r["chapter"],
-                "scene": r["scene"],
-                "span": r["span"],
-                "text": r["evidence_text"]
-            }]
-        })
+            if w >= sent_thr:
+                info = edges.setdefault(a, {}).setdefault(b, {'label': 'cooc_sent', 'weight': 0, 'evidence': []})
+                if sent_thr >= scene_thr:
+                    edges[a][b]['label'] = 'cooc_sent'
+                edges[a][b]['weight'] = max(edges[a][b]['weight'], w)
 
-    out = {
-        "cooc_scene": graph_scene,
-        "cooc_sent": graph_sent,
-        "regex_relations": regex_edges,
-        "edges": edges
-    }
+    # regex_relations
+    for r in regex_rel:
+        a, b = r['a'], r['b']
+        info = edges.setdefault(a, {}).setdefault(b, {'label': r['label'], 'weight': 0, 'evidence': []})
+        if cfg.get('regex_roles', True):
+            info['label'] = r['label']
+        info['weight'] += 1
+        info['evidence'].append({'chapter': r['chapter'], 'scene': r['scene'], 'span': r['span'], 'text': r['evidence_text']})
 
-    out_path = POSTPROC_DIR / f"{book_id}_relations_raw.json"
-    save_json(out, out_path)
-    logger.info(f"✓ Relations saved → {out_path}")
-
-if __name__ == "__main__":
-    import sys
-    bid = sys.argv[1] if len(sys.argv) > 1 else BOOK_ID
-    main(bid)
+    # Сохранение итоговой структуры
+    save_json(edges, final_path)
+    logger.info(f"[relations] Final relationships saved → {final_path.name}")

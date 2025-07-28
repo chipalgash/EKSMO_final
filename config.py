@@ -26,7 +26,7 @@ STAGE_MODULES = {
 
 STAGE_CFG: Dict[str, Dict[str, Any]] = {
     "global": {
-        "workspace_root": "workspace",  # твой корень с книгами
+        "workspace_root": "workspace",  # корень с папками книг
         "log_level": "INFO",
     },
     "reader": {},
@@ -39,7 +39,10 @@ STAGE_CFG: Dict[str, Dict[str, Any]] = {
         "merge_spacy_natasha": True,
         "min_mentions": 3,
         "min_scenes": 2,
-        "stopwords_person_like": ["глава","пролог","эпилог","часть","том","курсив","вечер","утро"],
+        "stopwords_person_like": [
+            "глава", "пролог", "эпилог", "часть",
+            "том", "курсив", "вечер", "утро"
+        ],
         "fuzzy_threshold": 90,
         "use_morph_gender": True,
         "save_mentions_index": True,
@@ -47,11 +50,15 @@ STAGE_CFG: Dict[str, Dict[str, Any]] = {
     "coref": {
         "window": 3,
         "pronouns": {
-            "male":  ["он","его","нему","ним","него","им"],
-            "female":["она","её","нее","ней","ею"],
-            "neutral":["они","их","ими","них","им"],
+            "male":  ["он", "его", "нему", "ним", "него", "им"],
+            "female": ["она", "её", "нее", "ней", "ею"],
+            "neutral": ["они", "их", "ими", "них", "им"],
         },
         "attach_type_field": True,
+        # включить нейросетевую кореференцию через neuralcoref
+        "use_neural_coref": True,
+        # объединять упоминания вне сцены (по всему тексту главы)
+        "cross_scene": False,
     },
     "relations": {
         "scene_min_cooccurs": 2,

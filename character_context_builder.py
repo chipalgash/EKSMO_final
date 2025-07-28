@@ -1,143 +1,124 @@
-# character_context_builder.py
+# -*- coding: utf-8 -*-
+"""
+Стадия Contexts: сбор контекстов упоминаний персонажей.
+Чтение:
+  50_coref/<book_id>_coref.json
+  20_preprocessed/<book_id>_preprocessed.json
+Запись:
+  70_contexts/<book_id>_contexts.json
+"""
 from __future__ import annotations
 import json
 from pathlib import Path
-from typing import Dict, List, Any, Tuple
+from typing import Any, Dict, List, Tuple
 from loguru import logger
-import re
 
-BOOK_ID = "633450"
-PREPROC_DIR = Path("preprocessed_texts")
-POSTPROC_DIR = Path("postprocessed")
-OUT_DIR = POSTPROC_DIR / "contexts"
 
-# окно дополнительных предложений вокруг упоминания
-LEFT_WIN  = 1
-RIGHT_WIN = 1
+def run_stage(paths: Dict[str, Path], cfg: Dict[str, Any]) -> None:
+    # Получаем идентификатор книги и пути
+    book_id = paths['book_root'].name
+    coref_path = paths['coref_dir'] / f"{book_id}_coref.json"
+    preproc_path = paths['preprocess_dir'] / f"{book_id}_preprocessed.json"
+    out_dir = paths['contexts_dir']
+    out_dir.mkdir(parents=True, exist_ok=True)
+    out_path = out_dir / f"{book_id}_contexts.json"
 
-def load_json(p: Path) -> Any:
-    with p.open("r", encoding="utf-8") as f:
-        return json.load(f)
+    # Пропустить, если уже есть и не force
+    if out_path.exists() and not cfg.get('force', False):
+        logger.info(f"[contexts] Результаты есть, пропускаю: {out_path.name}")
+        return
 
-def save_json(obj: Any, p: Path):
-    p.parent.mkdir(parents=True, exist_ok=True)
-    with p.open("w", encoding="utf-8") as f:
-        json.dump(obj, f, ensure_ascii=False, indent=2)
+    # Загрузка входных данных
+    if not coref_path.exists():
+        raise FileNotFoundError(f"[contexts] Нет coref-файла: {coref_path}")
+    if not preproc_path.exists():
+        raise FileNotFoundError(f"[contexts] Нет препроцессинга: {preproc_path}")
+    with coref_path.open('r', encoding='utf-8') as f:
+        coref_data = json.load(f)
+    with preproc_path.open('r', encoding='utf-8') as f:
+        prep_data = json.load(f)
 
-def build_sentence_offsets(text: str, sentences: List[str]) -> List[Tuple[int,int]]:
-    """Если offsets не сохранены в препроцессоре."""
-    offs, pos = [], 0
-    for s in sentences:
-        idx = text.find(s, pos)
-        if idx == -1:
-            # fallback (редко): ищем по регулярке первые 10 символов
-            m = re.search(re.escape(s[:10]), text[pos:])
-            idx = pos + m.start() if m else pos
-        offs.append((idx, idx+len(s)))
-        pos = idx + len(s)
-    return offs
+    # Параметры из config
+    left_win = cfg.get('left_sentences', 2)
+    right_win = cfg.get('right_sentences', 1)
+    max_ctx = cfg.get('max_contexts_per_char', 100)
+    max_chars = cfg.get('max_chars_per_context', 2500)
 
-def build_scene_cache(pre: dict) -> Dict[Tuple[str,str], dict]:
-    cache = {}
-    for ch, scenes in pre.items():
-        for sc, data in scenes.items():
-            text = data["cleaned_text"]
-            sents = data.get("sentences") or []
-            offs = data.get("sent_offsets")
-            if not offs:
-                offs = build_sentence_offsets(text, sents)
-            cache[(str(ch), str(sc))] = {
-                "text": text,
-                "sentences": sents,
-                "offsets": offs
-            }
-    return cache
+    # Строим кэш сцен: (chapter, scene) -> {'text', 'sentences', 'offsets'}
+    scene_cache: Dict[Tuple[int,int], Dict[str, Any]] = {}
+    for ch in prep_data.get('chapters', []):
+        ch_id = ch['id']
+        for sc in ch.get('scenes', []):
+            sc_id = sc['id']
+            # Берем либо готовый текст сцены, либо собираем из предложений
+            text = sc.get('text') or " ".join(s['text'] for s in sc.get('sentences', []))
+            sents = [s['text'] for s in sc.get('sentences', [])]
+            # Вычисляем оффсеты предложений
+            offs: List[Tuple[int,int]] = []
+            pos = 0
+            for sent in sents:
+                idx = text.find(sent, pos)
+                if idx < 0:
+                    idx = pos
+                offs.append((idx, idx+len(sent)))
+                pos = idx + len(sent)
+            scene_cache[(ch_id, sc_id)] = {'text': text, 'sentences': sents, 'offsets': offs}
 
-def collect_context_for_char(char: dict,
-                             scene_cache: Dict[Tuple[str,str], dict]) -> Dict[str, Any]:
-    """
-    Возвращает структуру с контекстами:
-    {
-      "id": ...,
-      "norm": ...,
-      "mentions": N,
-      "events": [  # отсортированные по порядку
-         {
-           "chapter": "...",
-           "scene": "...",
-           "sent_id": 42,
-           "sentence": "...",
-           "window": ["prev sent", "sent", "next sent"],
-           "text_span": [start, end]
-         }, ...
-      ],
-      "scenes": {
-         "(ch,sc)": "полный текст сцены" (опционально)
-      }
-    }
-    """
-    events = []
-    # сортируем упоминания по (chapter, scene, sent_id, start)
-    ments = sorted(char["mentions"], key=lambda m: (str(m["chapter"]), str(m["scene"]),
-                                                    m.get("sent_id", -1), m.get("start", -1)))
-    for m in ments:
-        ch, sc = str(m["chapter"]), str(m["scene"])
-        cache = scene_cache.get((ch, sc))
-        if not cache:
-            continue
-        sents = cache["sentences"]
-        offs  = cache["offsets"]
-        sid   = m.get("sent_id")
-        if sid is None or sid >= len(sents):
-            # naive fallback: найдём предложение по start
-            sid = 0
-            start = m.get("start", 0)
-            for i, (st, en) in enumerate(offs):
-                if st <= start < en:
-                    sid = i
-                    break
-        # окно вокруг
-        left  = max(0, sid - LEFT_WIN)
-        right = min(len(sents)-1, sid + RIGHT_WIN)
-        window_sents = sents[left:right+1]
-
-        events.append({
-            "chapter": ch,
-            "scene": sc,
-            "sent_id": sid,
-            "sentence": sents[sid],
-            "window": window_sents,
-            "text_span": [m.get("start"), m.get("end")],
-            "mention_text": m.get("text"),
-            "type": m.get("type", "name")
+    # Собираем контексты для каждого персонажа
+    contexts: List[Dict[str, Any]] = []
+    for ent in coref_data.get('entities', []):
+        events: List[Dict[str, Any]] = []
+        # Сортируем упоминания
+        mentions = sorted(
+            ent.get('mentions', []),
+            key=lambda m: (m['chapter'], m['scene'], m.get('sent_id', -1), m.get('start', -1))
+        )
+        for m in mentions:
+            ch_id = m['chapter']; sc_id = m['scene']; sid = m.get('sent_id')
+            cache = scene_cache.get((ch_id, sc_id))
+            if not cache:
+                continue
+            sents = cache['sentences']; offs = cache['offsets']
+            # Если sent_id вне диапазона, ищем по смещению
+            if sid is None or sid < 0 or sid >= len(sents):
+                start = m.get('start', 0)
+                sid = 0
+                for i, (st, en) in enumerate(offs):
+                    if st <= start < en:
+                        sid = i; break
+            # Окно предложений
+            left = max(0, sid - left_win)
+            right = min(len(sents)-1, sid + right_win)
+            window = sents[left:right+1]
+            # Отрезок полного текста
+            span_start = offs[left][0]
+            span_end = offs[right][1]
+            full_text = cache['text'][span_start:span_end]
+            # Ограничим длину фрагмента
+            if len(full_text) > max_chars:
+                full_text = full_text[:max_chars]
+            events.append({
+                'mention_id': m['mention_id'],
+                'chapter': ch_id,
+                'scene': sc_id,
+                'sent_id': sid,
+                'window': window,
+                'text': full_text,
+                'mention_text': m.get('text'),
+                'type': m.get('type', 'name')
+            })
+            if len(events) >= max_ctx:
+                break
+        contexts.append({
+            'entity_id': ent['id'],
+            'norm': ent.get('norm'),
+            'gender': ent.get('gender', 'unknown'),
+            'aliases': ent.get('aliases', []),
+            'contexts': events
         })
 
-    return {
-        "id": char["id"],
-        "norm": char["norm"],
-        "gender": char.get("gender", "unknown"),
-        "aliases": char.get("aliases", []),
-        "mentions": len(char["mentions"]),
-        "events": events
-    }
+    # Сохраняем
+    with out_path.open('w', encoding='utf-8') as f:
+        json.dump({'book_id': book_id, 'contexts': contexts}, f, ensure_ascii=False, indent=2)
+    logger.info(f"[contexts] Сохранено: {out_path.name}")
 
-def main(book_id: str = BOOK_ID):
-    pre = load_json(PREPROC_DIR / f"{book_id}_preprocessed.json")
-    # берём пропатченный файл персонажей
-    chars = load_json(POSTPROC_DIR / f"{book_id}_characters_coref_patched.json")
-
-    scene_cache = build_scene_cache(pre)
-
-    contexts = {}
-    for cid, ch in chars.items():
-        contexts[cid] = collect_context_for_char(ch, scene_cache)
-
-    out_path = OUT_DIR / f"{book_id}_contexts.json"
-    save_json(contexts, out_path)
-    logger.info(f"✓ Contexts saved → {out_path}")
-    logger.info(f"Персонажей: {len(contexts)}")
-
-if __name__ == "__main__":
-    import sys
-    bid = sys.argv[1] if len(sys.argv) > 1 else BOOK_ID
-    main(bid)
