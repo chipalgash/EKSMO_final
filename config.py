@@ -15,13 +15,13 @@ STAGE_ORDER = [
 
 # Модули лежат в корне проекта
 STAGE_MODULES = {
-    "reader":     "doc_reader",
-    "preprocess": "text_preprocessor",
-    "ner":        "ner_extractor",
-    "coref":      "coref_resolver",
-    "relations":  "relationships_extractor",
-    "contexts":   "character_context_builder",
-    "summary":    "character_summarizer",
+  "reader":     "doc_reader",
+  "preprocess": "text_preprocessor",
+  "ner":        "ner_extractor",
+  "coref":      "coref_resolver",
+  "relations":  "relationships_extractor",
+  "contexts":   "character_context_builder",
+  "summary":    "character_summarizer",
 }
 
 STAGE_CFG: Dict[str, Dict[str, Any]] = {
@@ -72,7 +72,9 @@ STAGE_CFG: Dict[str, Dict[str, Any]] = {
         "max_chars_per_context": 2500,
     },
     "summary": {
-        "model": "fred_t5",          # fred_t5 | openai
+        "model": "fred_t5",
+        "model_name": "ai-forever/FRED-T5-large",
+        "device": "cuda",  # или "cpu"
         "chunk_tokens": 900,
         "cache_dir": "cache/llm",
         "prompt_template": "default",
