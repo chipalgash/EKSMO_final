@@ -155,21 +155,22 @@ def run_stage(paths: Dict[str, Path], cfg: Dict[str, Any]) -> None:
     else:
         raise ValueError(f"Unsupported summary model: {model_type}")
 
-    # загрузка контекстов (поддерживаем dict и list)
+    # -- Чтение contexts.json и подготовка списка (id, entity) --
     if not ctx_path.exists():
         logger.error(f"[summary] Contexts not found: {ctx_path}")
         return
-    raw_ctx = json.loads(ctx_path.read_text(encoding="utf-8"))
+    raw_data = json.loads(ctx_path.read_text(encoding="utf-8"))
 
-    if isinstance(raw_ctx, dict):
-        items = raw_ctx.items()
-    elif isinstance(raw_ctx, list):
+    # Собираем итемы: поддерживаем dict и list
+    if isinstance(raw_data, dict):
+        items = list(raw_data.items())
+    elif isinstance(raw_data, list):
         items = []
-        for idx, ent in enumerate(raw_ctx):
+        for idx, ent in enumerate(raw_data):
             cid = str(ent.get("id", ent.get("entity_id", idx)))
             items.append((cid, ent))
     else:
-        logger.error(f"[summary] Unexpected contexts format: {type(raw_ctx)}")
+        logger.error(f"[summary] Unexpected contexts format: {type(raw_data)}")
         return
 
     # генерируем summary персонажей
