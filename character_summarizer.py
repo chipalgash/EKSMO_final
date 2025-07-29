@@ -2,7 +2,6 @@
 from __future__ import annotations
 import re
 import json
-import json5
 from pathlib import Path
 from typing import Dict, Any, List, Tuple
 from loguru import logger
@@ -20,16 +19,28 @@ SYS_INSTR = (
 
 PROMPT_TEMPLATE = """{sys}
 
-Фрагменты о персонаже «{name}» (хронологически):
+Фрагменты о персонаже «{name}» (в хронологическом порядке):
 {context}
 
-Отвечай **только** валидным JSON-объектом в строго таком формате и больше ничего:
-{{  
-  "biography": "<краткая биография персонажа (3–4 предложения)>",  
-  "traits": ["<черта 1>", "<черта 2>", "..."],  
-  "timeline": ["<событие 1>", "<событие 2>", "..."],  
-  "story_summary": "<итоговое резюме сюжетной линии персонажа (5–7 предложений)>"  
-}}
+Пожалуйста, составь ответ следующих блоков. Каждый блок обязательно отдели заголовком и пустой строкой:
+
+Биография:
+<3–4 предложения о прошлом персонажа>
+
+Черты:
+- trait1
+- trait2
+- trait3
+
+Хронология:
+- событие 1 (коротко)
+- событие 2
+- событие 3
+
+Итоговый сюжет:
+<5–7 предложений о роли и развитии персонажа в истории>
+
+Никаких JSON, списков полей и лишнего текста — только эти четыре блока.
 """
 
 # -------------------- UTILITIES --------------------
@@ -71,6 +82,42 @@ def normalize_list_str(lst: List[str]) -> List[str]:
             out.append(s)
     return out
 
+def parse_summary_text(text: str) -> dict:
+    """
+    Извлекает четыре секции из сгенерированного текста:
+    'Биография', 'Черты', 'Хронология', 'Итоговый сюжет'
+    и возвращает их как словарь.
+    Если не удаётся найти все секции, возвращает весь текст в story_summary.
+    """
+    pattern = (
+        r"Биография:\s*(?P<bio>.*?)\n+"
+        r"Черты:\s*(?P<traits>.*?)\n+"
+        r"Хронология:\s*(?P<timeline>.*?)\n+"
+        r"Итоговый сюжет:\s*(?P<story>.*)"
+    )
+    m = re.search(pattern, text, flags=re.DOTALL)
+    if not m:
+        return {
+            "biography": "",
+            "traits": [],
+            "timeline": [],
+            "story_summary": text.strip()
+        }
+    bio_block   = m.group("bio").strip()
+    traits_block   = m.group("traits").strip()
+    timeline_block = m.group("timeline").strip()
+    story_block    = m.group("story").strip()
+
+    traits   = re.findall(r"^[\-\*\u2022]\s*(.+)$", traits_block, flags=re.M)
+    timeline = re.findall(r"^[\-\*\u2022]\s*(.+)$", timeline_block, flags=re.M)
+
+    return {
+        "biography": bio_block,
+        "traits": traits,
+        "timeline": timeline,
+        "story_summary": story_block
+    }
+
 def merge_piece(merged: dict, piece: dict):
     if not merged["biography"] and piece.get("biography"):
         merged["biography"] = piece["biography"]
@@ -85,9 +132,9 @@ def merge_piece(merged: dict, piece: dict):
             merged["story_summary"] = piece["story_summary"]
 
 def post_clean(merged: dict):
-    merged["traits"] = normalize_list_str(merged["traits"])
-    merged["timeline"] = normalize_list_str(merged["timeline"])
-    merged["biography"] = merged["biography"].strip()
+    merged["traits"]        = normalize_list_str(merged["traits"])
+    merged["timeline"]      = normalize_list_str(merged["timeline"])
+    merged["biography"]     = merged["biography"].strip()
     merged["story_summary"] = merged["story_summary"].strip()
 
 # -------------------- MODEL --------------------
@@ -116,15 +163,14 @@ class FredSummarizer:
 
 # -------------------- STAGE --------------------
 def run_stage(paths: Dict[str, Path], cfg: Dict[str, Any]) -> None:
-    book_id  = paths["book_root"].name
-    ctx_path = paths["contexts_dir"]  / f"{book_id}_contexts.json"
-    rel_path = paths["relations_dir"] / f"{book_id}_relationships.json"
-    out_dir  = paths["summary_dir"]
+    book_id   = paths["book_root"].name
+    ctx_path  = paths["contexts_dir"]  / f"{book_id}_contexts.json"
+    out_dir   = paths["summary_dir"]
     out_dir.mkdir(parents=True, exist_ok=True)
 
     summ_cfg   = cfg.get("summary", {})
     model_type = summ_cfg.get("model", "fred_t5")
-    device     = summ_cfg.get("device", "cuda")
+    device     = summ_cfg.get("device", "cpu")
     max_input  = summ_cfg.get("chunk_tokens", 900)
     max_gen    = summ_cfg.get("gen_tokens", 512)
     overlap    = summ_cfg.get("sent_overlap", 2)
@@ -163,6 +209,7 @@ def run_stage(paths: Dict[str, Path], cfg: Dict[str, Any]) -> None:
         if not events:
             continue
 
+        # собираем текст контекстов
         lines = [
             f"[Гл.{e['chapter']} Сц.{e['scene']} #{e['sent_id']}] {e['text']}"
             for e in events
@@ -173,23 +220,7 @@ def run_stage(paths: Dict[str, Path], cfg: Dict[str, Any]) -> None:
         for chunk in chunks:
             prompt = PROMPT_TEMPLATE.format(sys=SYS_INSTR, name=name, context=chunk)
             raw    = summarizer.generate(prompt, max_input, max_gen)
-
-            # вычленяем JSON
-            m = re.search(r'(\{.*\})', raw, flags=re.DOTALL)
-            if m:
-                js = m.group(1)
-                try:
-                    piece = json.loads(js)
-                except Exception:
-                    try:
-                        piece = json5.loads(js)
-                    except Exception as e2:
-                        logger.warning(f"[{name}] Ошибка парсинга JSON5: {e2}. Сохраняю весь ответ в raw_text")
-                        piece = {"raw_text": raw}
-            else:
-                logger.warning(f"[{name}] Не нашёл JSON в ответе, сохраняю весь текст в raw_text")
-                piece = {"raw_text": raw}
-
+            piece  = parse_summary_text(raw)
             merge_piece(merged, piece)
 
         post_clean(merged)
@@ -205,18 +236,10 @@ def run_stage(paths: Dict[str, Path], cfg: Dict[str, Any]) -> None:
 
     # опционально summary всей книги
     if save_book:
-        combined    = "\n".join(f"{v['name']}: {v['biography']}" for v in characters_out.values())
+        combined   = "\n".join(f"{v['name']}: {v['biography']}" for v in characters_out.values())
         book_prompt = "Общая история книги через призму персонажей:\n\n" + combined
-        book_raw    = summarizer.generate(book_prompt, max_input * 2, max_gen)
-        m = re.search(r'(\{.*\})', book_raw, flags=re.DOTALL)
-        if m:
-            try:
-                bj = json.loads(m.group(1))
-                book_summary = bj.get("story_summary") or bj.get("biography", "")
-            except Exception:
-                book_summary = book_raw.strip()
-        else:
-            book_summary = book_raw.strip()
+        book_raw   = summarizer.generate(book_prompt, max_input * 2, max_gen)
+        book_summary = book_raw.strip()
 
         book_path = out_dir / f"{book_id}_book_summary.json"
         book_path.write_text(
