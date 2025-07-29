@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-# -*- coding: utf-8 -*-
 """
 NER Validation Stage: проверяет целостность и качество результатов NER.
 Чтение:
@@ -11,8 +10,8 @@ NER Validation Stage: проверяет целостность и качест�
 from __future__ import annotations
 import json
 from pathlib import Path
-from typing import Dict, Any, List, Tuple
-from collections import Counter
+from typing import Dict, Any, List, Tuple, DefaultDict
+from collections import Counter, defaultdict
 from loguru import logger
 
 # -------------------- STAGE --------------------
@@ -105,15 +104,6 @@ NER-стадия: Natasha + spaCy -> merge -> постобработка (фил
   30_ner/<book_id>_ner.json
   30_ner/<book_id>_mentions_index.json
 """
-
-from __future__ import annotations
-from pathlib import Path
-from typing import Any, Dict, List, Tuple, DefaultDict
-from collections import defaultdict, Counter
-import json
-
-from loguru import logger
-
 # -------------------- Глобальные модели (ленивая загрузка) --------------------
 
 _SPACY_NLP = None
