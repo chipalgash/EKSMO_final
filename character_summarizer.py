@@ -181,9 +181,13 @@ def run_stage(paths: Dict[str, Path], cfg: Dict[str, Any]) -> None:
                 try:
                     piece = json.loads(js)
                 except Exception:
-                    piece = json5.loads(js)
+                    try:
+                        piece = json5.loads(js)
+                    except Exception as e2:
+                        logger.warning(f"[{name}] Ошибка парсинга JSON5: {e2}. Сохраняю весь ответ в raw_text")
+                        piece = {"raw_text": raw}
             else:
-                logger.warning(f"[{name}] Не нашёл JSON, сохраняю в raw_text")
+                logger.warning(f"[{name}] Не нашёл JSON в ответе, сохраняю весь текст в raw_text")
                 piece = {"raw_text": raw}
 
             merge_piece(merged, piece)
