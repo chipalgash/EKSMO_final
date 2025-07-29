@@ -170,7 +170,7 @@ def run_stage(paths: Dict[str, Path], cfg: Dict[str, Any]) -> None:
 
     summ_cfg   = cfg.get("summary", {})
     model_type = summ_cfg.get("model", "fred_t5")
-    device     = summ_cfg.get("device", "cpu")
+    device     = summ_cfg.get("device", "cuda")
     max_input  = summ_cfg.get("chunk_tokens", 900)
     max_gen    = summ_cfg.get("gen_tokens", 512)
     overlap    = summ_cfg.get("sent_overlap", 2)
