@@ -182,7 +182,7 @@ def run_stage(paths: Dict[str, Path], cfg: Dict[str, Any]) -> None:
             continue
 
         lines = [
-            f"[Гл.{e['chapter']} Сц.{e['scene']} #{e['sent_id']}] {e['sentence']}"
+            f"[Гл.{e['chapter']} Сц.{e['scene']} #{e['sent_id']}] {e['text']}"
             for e in events
         ]
         chunks = make_sent_chunks_by_tokens(lines, summarizer.tokenizer, max_input, overlap)
