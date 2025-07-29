@@ -3,7 +3,7 @@ from __future__ import annotations
 import json
 import json5
 from pathlib import Path
-from typing import Dict, Any, List
+from typing import Dict, Any, List, Tuple
 from loguru import logger
 
 import torch
@@ -161,17 +161,17 @@ def run_stage(paths: Dict[str, Path], cfg: Dict[str, Any]) -> None:
         return
     raw_data = json.loads(ctx_path.read_text(encoding="utf-8"))
 
-    # Собираем итемы: поддерживаем dict и list
-    if isinstance(raw_data, dict):
-        items = list(raw_data.items())
-    elif isinstance(raw_data, list):
-        items = []
-        for idx, ent in enumerate(raw_data):
-            cid = str(ent.get("id", ent.get("entity_id", idx)))
-            items.append((cid, ent))
+    # Собираем айтемы: поддерживаем dict и list
+    if isinstance(raw_data, dict) and "contexts" in raw_data:
+        ctx_list = raw_data["contexts"]
     else:
-        logger.error(f"[summary] Unexpected contexts format: {type(raw_data)}")
-        return
+        ctx_list = raw_data if isinstance(raw_data, list) else []
+
+    # собираем пары (id, ent)
+    items: List[Tuple[str, dict]] = []
+    for ent in ctx_list:
+        cid = str(ent.get("entity_id", ent.get("id", "")))
+        items.append((cid, ent))
 
     # генерируем summary персонажей
     characters_out: Dict[str, Any] = {}
