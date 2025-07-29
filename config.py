@@ -72,12 +72,13 @@ STAGE_CFG: Dict[str, Dict[str, Any]] = {
         "max_chars_per_context": 2500,
     },
     "summary": {
-        "model": "fred_t5",
-        "model_name": "ai-forever/FRED-T5-large",
+        "model": "fred_t5",  # fred_t5
+        "model_name": "ai-forever/FRED-T5-large",  # путь или имя до модели
         "device": "cuda",  # или "cpu"
-        "chunk_tokens": 900,
-        "cache_dir": "cache/llm",
-        "prompt_template": "default",
+        "chunk_tokens": 900,  # max_input_tokens
+        "gen_tokens": 512,  # max_new_tokens
+        "sent_overlap": 2,  # overlap для разбивки контекстов
+        "max_events": 120,  # макс. кол-во контекстов на персонажа
         "save_book_summary": True,
     },
 }

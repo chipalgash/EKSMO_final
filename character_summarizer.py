@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import annotations
+import re
 import json
 import json5
 from pathlib import Path
@@ -22,18 +23,12 @@ PROMPT_TEMPLATE = """{sys}
 Фрагменты о персонаже «{name}» (хронологически):
 {context}
 
-Задачи:
-1) Краткая биография персонажа (3–4 предложения).
-2) Ключевые характеристики/черты личности (5–7 пунктов).
-3) Хронология ключевых событий персонажа (bullet list, 6–10 пунктов, прошедшее время).
-4) Итоговое резюме сюжетной линии персонажа (5–7 предложений).
-
-Ответ строго в JSON:
-{{
-  "biography": "...",
-  "traits": ["...", "..."],
-  "timeline": ["...", "..."],
-  "story_summary": "..."
+Отвечай **только** валидным JSON-объектом в строго таком формате и больше ничего:
+{{  
+  "biography": "<краткая биография персонажа (3–4 предложения)>",  
+  "traits": ["<черта 1>", "<черта 2>", "..."],  
+  "timeline": ["<событие 1>", "<событие 2>", "..."],  
+  "story_summary": "<итоговое резюме сюжетной линии персонажа (5–7 предложений)>"  
 }}
 """
 
@@ -65,18 +60,6 @@ def make_sent_chunks_by_tokens(
         chunks.append("\n".join(buf))
         start = max(i - overlap, start + 1)
     return chunks
-
-def safe_parse_json(text: str) -> dict:
-    """Извлекает JSON-блок из произвольного текста."""
-    start = text.find("{")
-    end = text.rfind("}")
-    if start < 0 or end <= start:
-        raise ValueError("No JSON braces found")
-    candidate = text[start:end+1]
-    try:
-        return json.loads(candidate)
-    except Exception:
-        return json5.loads(candidate)
 
 def normalize_list_str(lst: List[str]) -> List[str]:
     seen = set()
@@ -141,7 +124,7 @@ def run_stage(paths: Dict[str, Path], cfg: Dict[str, Any]) -> None:
 
     summ_cfg   = cfg.get("summary", {})
     model_type = summ_cfg.get("model", "fred_t5")
-    device     = summ_cfg.get("device", "cpu")
+    device     = summ_cfg.get("device", "cuda")
     max_input  = summ_cfg.get("chunk_tokens", 900)
     max_gen    = summ_cfg.get("gen_tokens", 512)
     overlap    = summ_cfg.get("sent_overlap", 2)
@@ -155,25 +138,24 @@ def run_stage(paths: Dict[str, Path], cfg: Dict[str, Any]) -> None:
     else:
         raise ValueError(f"Unsupported summary model: {model_type}")
 
-    # -- Чтение contexts.json и подготовка списка (id, entity) --
+    # загрузка контекстов
     if not ctx_path.exists():
         logger.error(f"[summary] Contexts not found: {ctx_path}")
         return
     raw_data = json.loads(ctx_path.read_text(encoding="utf-8"))
 
-    # Собираем айтемы: поддерживаем dict и list
+    # подготовка списка элементов
     if isinstance(raw_data, dict) and "contexts" in raw_data:
         ctx_list = raw_data["contexts"]
     else:
         ctx_list = raw_data if isinstance(raw_data, list) else []
 
-    # собираем пары (id, ent)
     items: List[Tuple[str, dict]] = []
     for ent in ctx_list:
         cid = str(ent.get("entity_id", ent.get("id", "")))
         items.append((cid, ent))
 
-    # генерируем summary персонажей
+    # цикл по персонажам
     characters_out: Dict[str, Any] = {}
     for cid, ent in items:
         name   = ent.get("norm", "")
@@ -191,17 +173,25 @@ def run_stage(paths: Dict[str, Path], cfg: Dict[str, Any]) -> None:
         for chunk in chunks:
             prompt = PROMPT_TEMPLATE.format(sys=SYS_INSTR, name=name, context=chunk)
             raw    = summarizer.generate(prompt, max_input, max_gen)
-            try:
-                piece = safe_parse_json(raw)
-            except Exception as e:
-                logger.warning(f"[{name}] JSON parse error: {e}")
-                continue
-            merge_piece(merged, piece)
-        post_clean(merged)
 
+            # вычленяем JSON
+            m = re.search(r'(\{.*\})', raw, flags=re.DOTALL)
+            if m:
+                js = m.group(1)
+                try:
+                    piece = json.loads(js)
+                except Exception:
+                    piece = json5.loads(js)
+            else:
+                logger.warning(f"[{name}] Не нашёл JSON, сохраняю в raw_text")
+                piece = {"raw_text": raw}
+
+            merge_piece(merged, piece)
+
+        post_clean(merged)
         characters_out[cid] = {"name": name, **merged}
 
-    # сохраняем результаты персонажей
+    # сохраняем summaries персонажей
     char_path = out_dir / f"{book_id}_characters_summary.json"
     char_path.write_text(
         json.dumps(characters_out, ensure_ascii=False, indent=2),
@@ -209,15 +199,19 @@ def run_stage(paths: Dict[str, Path], cfg: Dict[str, Any]) -> None:
     )
     logger.info(f"[summary] Characters saved → {char_path.name}")
 
-    # опционально: summary всей книги
+    # опционально summary всей книги
     if save_book:
         combined    = "\n".join(f"{v['name']}: {v['biography']}" for v in characters_out.values())
         book_prompt = "Общая история книги через призму персонажей:\n\n" + combined
         book_raw    = summarizer.generate(book_prompt, max_input * 2, max_gen)
-        try:
-            book_j      = safe_parse_json(book_raw)
-            book_summary = book_j.get("story_summary", book_j.get("biography", "")).strip()
-        except Exception:
+        m = re.search(r'(\{.*\})', book_raw, flags=re.DOTALL)
+        if m:
+            try:
+                bj = json.loads(m.group(1))
+                book_summary = bj.get("story_summary") or bj.get("biography", "")
+            except Exception:
+                book_summary = book_raw.strip()
+        else:
             book_summary = book_raw.strip()
 
         book_path = out_dir / f"{book_id}_book_summary.json"
