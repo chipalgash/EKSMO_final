@@ -80,7 +80,7 @@ def run_stage(paths: Dict[str, Path], cfg: Dict[str, Any]) -> None:
     проверяет каждую кластер-entity через LLM,
     сохраняет отфильтрованный результат в 40_postprocessed/<book_id>_ner_validated.json
     """
-    book_id = paths["ner_dir"].name
+    book_id  = paths["book_root"].name
     in_path = paths["ner_dir"] / f"{book_id}_ner.json"
     out_dir = paths.get("postproc_dir", paths["ner_dir"].parent / "40_postprocessed")
     out_dir.mkdir(parents=True, exist_ok=True)

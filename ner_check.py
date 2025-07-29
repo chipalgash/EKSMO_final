@@ -22,7 +22,7 @@ def run_stage(paths: Dict[str, Path], cfg: Dict[str, Any]) -> None:
     Сохраняет отчёт ner_report.json.
     """
     # Определяем book_id по имени директории ner_dir
-    book_id   = paths["ner_dir"].name
+    book_id = paths['book_root'].name
     ner_path  = paths["ner_dir"] / f"{book_id}_ner.json"
     idx_path  = paths["ner_dir"] / f"{book_id}_mentions_index.json"
 
