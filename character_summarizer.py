@@ -177,7 +177,7 @@ def run_stage(paths: Dict[str, Path], cfg: Dict[str, Any]) -> None:
     characters_out: Dict[str, Any] = {}
     for cid, ent in items:
         name   = ent.get("norm", "")
-        events = ent.get("events", [])[:max_events]
+        events = ent.get("contexts", [])[:max_events]
         if not events:
             continue
 
