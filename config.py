@@ -7,7 +7,8 @@ STAGE_ORDER = [
     "reader",       # docx -> txt (10_extracted)
     "preprocess",   # чистка/главы/сцены/предложения (20_preprocessed)
     "ner",          # Natasha+spaCy + постобработка (30_ner)
-    "ner_check",    # проверка целостности результатов NER (40_postprocess)
+    "ner_check",    # проверка целостности результатов NER (30_ner)
+    "ner_validator",  # LLM‑валидация сущностей (40_postprocessed)
     "coref",        # правила coref (50_coref)
     "relations",    # граф отношений (60_relations)
     "contexts",     # сбор контекстов (70_contexts)
@@ -20,6 +21,7 @@ STAGE_MODULES = {
   "preprocess": "text_preprocessor",
   "ner":        "ner_extractor",
   "ner_check":  "ner_extractor",
+  "ner_validator":  "ner_llm_validator",
   "coref":      "coref_resolver",
   "relations":  "relationships_extractor",
   "contexts":   "character_context_builder",
@@ -52,7 +54,14 @@ STAGE_CFG: Dict[str, Dict[str, Any]] = {
     "ner_check": {
         "save_report": True,
     },
-
+    "ner_validator": {
+        "use_llm": True,
+        "sample_mentions": 3,
+        "model_name": "ai-forever/FRED-T5-base",
+        "device": "cuda",
+        "chunk_tokens": 256,
+        "gen_tokens": 8,
+    },
     "coref": {
         "window": 3,
         "pronouns": {
