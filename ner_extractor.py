@@ -1,4 +1,104 @@
 # -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+"""
+NER Validation Stage: проверяет целостность и качество результатов NER.
+Чтение:
+  30_ner/<book_id>_ner.json
+  30_ner/<book_id>_mentions_index.json
+Запись:
+  30_ner/<book_id>_ner_report.json (опционально)
+"""
+from __future__ import annotations
+import json
+from pathlib import Path
+from typing import Dict, Any, List, Tuple
+from collections import Counter
+from loguru import logger
+
+# -------------------- STAGE --------------------
+def run_stage(paths: Dict[str, Path], cfg: Dict[str, Any]) -> None:
+    book_id = paths['ner_dir'].name if 'ner_dir' in paths else paths['book_root'].name
+    ner_path = paths['ner_dir'] / f"{book_id}_ner.json"
+    idx_path = paths['ner_dir'] / f"{book_id}_mentions_index.json"
+
+    # Проверяем наличие файлов
+    if not ner_path.exists():
+        logger.error(f"[ner_check] Нет файла NER: {ner_path}")
+        return
+    if not idx_path.exists():
+        logger.error(f"[ner_check] Нет индекса упоминаний: {idx_path}")
+        return
+
+    # Загружаем данные
+    ner_data = json.loads(ner_path.read_text(encoding='utf-8'))
+    mentions_index = json.loads(idx_path.read_text(encoding='utf-8'))
+
+    entities = ner_data.get('entities', [])
+    total_entities = len(entities)
+    total_mentions = 0
+
+    # Собираем все упоминания и проверяем индекс
+    missing_in_index: List[Tuple[str,str]] = []
+    mention_ids: List[str] = []
+    for ent in entities:
+        ent_id = ent.get('id')
+        mentions = ent.get('mentions', [])
+        total_mentions += len(mentions)
+        for m in mentions:
+            mid = m.get('mention_id')
+            mention_ids.append(mid)
+            # строим ключ сцены
+            ch = m.get('chapter')
+            sc = m.get('scene')
+            sid = m.get('sent_id')
+            key = f"{ch}::{sc}::{sid}"
+            # проверяем наличие в mentions_index
+            idx_list = mentions_index.get(key, [])
+            if mid not in idx_list:
+                missing_in_index.append((mid, key))
+
+    # Ищем дубликаты ID
+    duplicates = [mid for mid, cnt in Counter(mention_ids).items() if cnt > 1]
+
+    # Статистика по упоминаниям на сущность
+    per_entity = [len(ent.get('mentions', [])) for ent in entities]
+    avg_mentions = sum(per_entity) / total_entities if total_entities else 0
+
+    # Логируем результаты
+    logger.info(f"[ner_check] Всего сущностей: {total_entities}")
+    logger.info(f"[ner_check] Всего упоминаний: {total_mentions}")
+    logger.info(f"[ner_check] Среднее упоминаний на сущность: {avg_mentions:.2f}")
+
+    if missing_in_index:
+        logger.warning(
+            f"[ner_check] Упомянено {len(missing_in_index)} случаев, отсутствующих в index.json"  
+        )
+        # по желанию можно вывести первые 5
+        for mid, key in missing_in_index[:5]:
+            logger.debug(f"  Missing: {mid} in key {key}")
+
+    if duplicates:
+        logger.warning(
+            f"[ner_check] Найдены дублирующиеся mention_id: {len(duplicates)} элементов"  
+        )
+        for mid in duplicates[:5]:
+            logger.debug(f"  Duplicate ID: {mid}")
+
+    # По умолчанию сохраняем отчет
+    report = {
+        'total_entities': total_entities,
+        'total_mentions': total_mentions,
+        'avg_mentions_per_entity': avg_mentions,
+        'missing_in_index': len(missing_in_index),
+        'duplicates': len(duplicates),
+        'issues_detected': bool(missing_in_index or duplicates)
+    }
+    report_path = paths['ner_dir'] / f"{book_id}_ner_report.json"
+    report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding='utf-8')
+    logger.info(f"[ner_check] Report saved → {report_path.name}")
+
+
+
 """
 NER-стадия: Natasha + spaCy -> merge -> постобработка (фильтры, кластеризация алиасов)
 Сохранение:
