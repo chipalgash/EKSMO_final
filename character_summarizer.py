@@ -98,9 +98,9 @@ def parse_summary_text(text: str) -> dict:
             "story_summary": text.strip()
         }
     return {
-        "biography":    m.group("bio").strip(),
-        "traits":       re.findall(r"^[\-\*\u2022]\s*(.+)$", m.group("traits"), flags=re.M),
-        "timeline":     re.findall(r"^[\-\*\u2022]\s*(.+)$", m.group("timeline"), flags=re.M),
+        "biography":     m.group("bio").strip(),
+        "traits":        re.findall(r"^[\-\*\u2022]\s*(.+)$", m.group("traits"), flags=re.M),
+        "timeline":      re.findall(r"^[\-\*\u2022]\s*(.+)$", m.group("timeline"), flags=re.M),
         "story_summary": m.group("story").strip(),
     }
 
@@ -149,7 +149,8 @@ class FredSummarizer:
 def run_stage(paths: Dict[str, Path], cfg: Dict[str, Any]) -> None:
     book_id   = paths["book_root"].name
     ctx_path  = paths["contexts_dir"]  / f"{book_id}_contexts.json"
-    out_dir   = paths["summary_dir"]; out_dir.mkdir(parents=True, exist_ok=True)
+    out_dir   = paths["summary_dir"]
+    out_dir.mkdir(parents=True, exist_ok=True)
 
     summ_cfg   = cfg.get("summary", {})
     model_type = summ_cfg.get("model", "fred_t5")
@@ -163,8 +164,8 @@ def run_stage(paths: Dict[str, Path], cfg: Dict[str, Any]) -> None:
 
     if model_type != "fred_t5":
         raise ValueError(f"Unsupported summary model: {model_type}")
-    model_name = summ_cfg.get("model_name", "ai-forever/FRED-T5-large")
-    summarizer = FredSummarizer(model_name, device)
+    model_name  = summ_cfg.get("model_name", "ai-forever/FRED-T5-large")
+    summarizer  = FredSummarizer(model_name, device)
 
     if not ctx_path.exists():
         logger.error(f"[summary] Contexts not found: {ctx_path}")
@@ -201,7 +202,7 @@ def run_stage(paths: Dict[str, Path], cfg: Dict[str, Any]) -> None:
 
     characters_out: Dict[str, Any] = {}
     for idx, (cid, ent) in enumerate(items, start=1):
-        name   = ent.get("name") or ent.get("norm") or ""
+        name = ent.get("name") or ent.get("norm") or ""
         logger.info(f"[summary] Персонаж {idx}/{total_chars} — id={cid}, name={name}")
 
         events = ent.get("events", [])[:max_events]
@@ -232,15 +233,21 @@ def run_stage(paths: Dict[str, Path], cfg: Dict[str, Any]) -> None:
 
     # сохраняем summaries
     char_path = out_dir / f"{book_id}_characters_summary.json"
-    char_path.write_text(json.dumps(characters_out, ensure_ascii=False, indent=2), encoding="utf-8")
+    char_path.write_text(
+        json.dumps(characters_out, ensure_ascii=False, indent=2),
+        encoding="utf-8"
+    )
     logger.info(f"[summary] Characters saved → {char_path.name}")
 
     # опционально общий summary книги
     if save_book:
-        combined   = "\n".join(f"{v['name']}: {v['biography']}" for v in characters_out.values())
+        combined    = "\n".join(f"{v['name']}: {v['biography']}" for v in characters_out.values())
         book_prompt = "Общая история книги через призму персонажей:\n\n" + combined
-        book_raw    = summarizer.generate(book_prompt, max_input*2, max_gen)
+        book_raw    = summarizer.generate(book_prompt, max_input * 2, max_gen)
         book_summary = book_raw.strip()
-        book_path = out_dir / f"{book_id}_book_summary.json"
-        book_path.write_text(json.dumps({"book_summary": book_summary}, ensure_ascii=False, indent=2), encoding="utf-8")
+        book_path   = out_dir / f"{book_id}_book_summary.json"
+        book_path.write_text(
+            json.dumps({"book_summary": book_summary}, ensure_ascii=False, indent=2),
+            encoding="utf-8"
+        )
         logger.info(f"[summary] Book summary saved → {book_path.name}")
