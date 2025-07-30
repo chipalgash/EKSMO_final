@@ -38,13 +38,14 @@ class PathManager:
         self.book_root = workspace_root / book_id
 
         self.stage_dirs = {
-            "reader":     self.book_root / "10_extracted",
-            "preprocess": self.book_root / "20_preprocessed",
-            "ner":        self.book_root / "30_ner",
-            "coref":      self.book_root / "50_coref",
-            "relations":  self.book_root / "60_relations",
-            "contexts":   self.book_root / "70_contexts",
-            "summary":    self.book_root / "80_summaries",
+            "reader":          self.book_root / "10_extracted",
+            "preprocess":      self.book_root / "20_preprocessed",
+            "ner":             self.book_root / "30_ner",
+            "coref":           self.book_root / "50_coref",
+            "relations":       self.book_root / "60_relations",
+            "contexts":        self.book_root / "70_contexts",
+            "filter_contexts": self.book_root / "72_filtered_contexts",
+            "summary":         self.book_root / "80_summaries",
         }
 
         self.raw_dir  = self.book_root / "00_raw"

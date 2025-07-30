@@ -11,7 +11,7 @@ STAGE_ORDER = [
   "coref",
   "relations",
   "contexts",
-  "sort_contexts",
+  "filter_contexts",
   "summary",
 ]
 
@@ -25,7 +25,7 @@ STAGE_MODULES = {
     "coref":         "coref_resolver",
     "relations":     "relationships_extractor",
     "contexts": "character_context_builder",
-    "sort_contexts": "context_sorter",
+    "filter_contexts": "filter_contexts",
     "summary": "character_summarizer",
 }
 
@@ -82,7 +82,7 @@ STAGE_CFG: Dict[str, Dict[str, Any]] = {
         "max_contexts_per_char": 100,
         "max_chars_per_context": 2500,
     },
-    "sort_contexts": {
+    "filter_contexts": {
         "enabled":   True,   # включить/отключить
         "top_chars": 5,      # сколько персонажей оставить (None = всех)
      },
