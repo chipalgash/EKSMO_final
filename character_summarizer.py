@@ -124,7 +124,7 @@ def post_clean(merged: dict):
 # -------------------- MODEL --------------------
 class FredSummarizer:
     def __init__(self, model_name: str, device: str):
-        logger.info(f"Loading FRED‑T5 '{model_name}' on {device}")
+        logger.info(f"Loading FRED-T5 '{model_name}' on {device}")
         self.tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
         self.model     = AutoModelForSeq2SeqLM.from_pretrained(model_name).to(device)
         self.device    = device
@@ -149,8 +149,7 @@ class FredSummarizer:
 def run_stage(paths: Dict[str, Path], cfg: Dict[str, Any]) -> None:
     book_id   = paths["book_root"].name
     ctx_path  = paths["contexts_dir"]  / f"{book_id}_contexts.json"
-    out_dir   = paths["summary_dir"]
-    out_dir.mkdir(parents=True, exist_ok=True)
+    out_dir   = paths["summary_dir"]; out_dir.mkdir(parents=True, exist_ok=True)
 
     summ_cfg   = cfg.get("summary", {})
     model_type = summ_cfg.get("model", "fred_t5")
@@ -162,92 +161,79 @@ def run_stage(paths: Dict[str, Path], cfg: Dict[str, Any]) -> None:
     save_book  = summ_cfg.get("save_book_summary", False)
     top_n      = summ_cfg.get("top_chars", None)
 
+    logger.info(f"[summary] Конфиг: top_chars={top_n}, max_events={max_events}, overlap={overlap}")
+
     if model_type != "fred_t5":
         raise ValueError(f"Unsupported summary model: {model_type}")
-    model_name  = summ_cfg.get("model_name", "ai-forever/FRED-T5-large")
-    summarizer  = FredSummarizer(model_name, device)
+    summarizer = FredSummarizer(
+        summ_cfg.get("model_name", "ai-forever/FRED-T5-large"),
+        device
+    )
 
     if not ctx_path.exists():
         logger.error(f"[summary] Contexts not found: {ctx_path}")
         return
-    raw_data = json.loads(ctx_path.read_text(encoding="utf-8"))
 
-    # распаковываем payload
-    if isinstance(raw_data, dict) and "contexts" in raw_data:
-        ctx_list = raw_data["contexts"]
-    elif isinstance(raw_data, list):
-        ctx_list = raw_data
+    raw = json.loads(ctx_path.read_text(encoding="utf-8"))
+    if isinstance(raw, dict) and "contexts" in raw:
+        ctx_list = raw["contexts"]
+    elif isinstance(raw, list):
+        ctx_list = raw
     else:
         logger.error(f"[summary] Неподдерживаемый формат {ctx_path}")
         return
 
-    logger.info(f"[summary] Из контекстов получили {len(ctx_list)} кандидатов")
+    logger.info(f"[summary] Всего кандидатов по контекстам: {len(ctx_list)}")
 
-    # топ‑N по числу событий
+    # 1) фильтруем по top_n
     if isinstance(top_n, int) and top_n > 0:
         ctx_list = sorted(
             ctx_list,
-            key=lambda ent: len(ent.get("events", [])),
+            key=lambda e: len(e.get("events", [])),
             reverse=True
         )[:top_n]
-        logger.info(f"[summary] Оставляем топ‑{top_n} по events: {len(ctx_list)} персонажей")
+        logger.info(f"[summary] Оставляем топ-{top_n} персонажей: {len(ctx_list)}")
 
-    # теперь формируем items для суммаризации
-    items = [
-        (str(ent.get("entity_id", ent.get("id", ""))), ent)
-        for ent in ctx_list
-    ]
-    total_chars = len(items)
-    logger.info(f"[summary] Начинаем суммаризацию {total_chars} персонажей")
+    # 2) теперь формируем items
+    items = [(str(e.get("entity_id", e.get("id", ""))), e) for e in ctx_list]
+    logger.info(f"[summary] Будем суммаризировать {len(items)} персонажей (должно быть {top_n})")
 
     characters_out: Dict[str, Any] = {}
     for idx, (cid, ent) in enumerate(items, start=1):
-        name = ent.get("name") or ent.get("norm") or ""
-        logger.info(f"[summary] Персонаж {idx}/{total_chars} — id={cid}, name={name}")
+        name = ent.get("name") or ent.get("norm", "")
+        logger.info(f"[summary] [{idx}/{len(items)}] id={cid}, name={name}")
 
         events = ent.get("events", [])[:max_events]
         if not events:
-            logger.warning(f"[{cid}] Нет событий, пропускаю")
+            logger.warning(f"[{cid}] Пропускаю — нет событий")
             continue
 
-        # собираем строки и разбиваем на чанки
-        lines = [
-            f"[Гл.{e['chapter']} Сц.{e['scene']} #{e['sent_id']}] {e['text']}"
-            for e in events
-        ]
+        # делим на чанки и собираем summary
+        lines = [f"[Гл.{ev['chapter']} Сц.{ev['scene']} #{ev['sent_id']}] {ev['text']}" for ev in events]
         chunks = make_sent_chunks_by_tokens(lines, summarizer.tokenizer, max_input, overlap)
-        logger.info(f"[{cid}] Разбито на {len(chunks)} чанков")
-
         merged = {"biography": "", "traits": [], "timeline": [], "story_summary": ""}
+
         for j, chunk in enumerate(chunks, start=1):
-            logger.info(f"[{cid}] Обрабатываю чанк {j}/{len(chunks)}")
+            logger.info(f"[{cid}] Чанк {j}/{len(chunks)}")
             prompt = PROMPT_TEMPLATE.format(sys=SYS_INSTR, name=name, context=chunk)
-            raw    = summarizer.generate(prompt, max_input, max_gen)
-            piece  = parse_summary_text(raw)
+            raw_out = summarizer.generate(prompt, max_input, max_gen)
+            piece   = parse_summary_text(raw_out)
             merge_piece(merged, piece)
-            logger.info(f"[{cid}] Чанк {j}/{len(chunks)} обработан")
 
         post_clean(merged)
-        logger.info(f"[{cid}] Готов итоговый summary персонажа")
         characters_out[cid] = {"name": name, **merged}
+        logger.info(f"[{cid}] Готов summary")
 
-    # сохраняем summaries
+    # сохраняем
     char_path = out_dir / f"{book_id}_characters_summary.json"
-    char_path.write_text(
-        json.dumps(characters_out, ensure_ascii=False, indent=2),
-        encoding="utf-8"
-    )
-    logger.info(f"[summary] Characters saved → {char_path.name}")
+    char_path.write_text(json.dumps(characters_out, ensure_ascii=False, indent=2), encoding="utf-8")
+    logger.info(f"[summary] Сохранили → {char_path.name}")
 
-    # опционально общий summary книги
+    # общий summary книги
     if save_book:
-        combined    = "\n".join(f"{v['name']}: {v['biography']}" for v in characters_out.values())
+        combined = "\n".join(f"{v['name']}: {v['biography']}" for v in characters_out.values())
         book_prompt = "Общая история книги через призму персонажей:\n\n" + combined
-        book_raw    = summarizer.generate(book_prompt, max_input * 2, max_gen)
-        book_summary = book_raw.strip()
+        book_out    = summarizer.generate(book_prompt, max_input*2, max_gen)
         book_path   = out_dir / f"{book_id}_book_summary.json"
-        book_path.write_text(
-            json.dumps({"book_summary": book_summary}, ensure_ascii=False, indent=2),
-            encoding="utf-8"
-        )
-        logger.info(f"[summary] Book summary saved → {book_path.name}")
+        book_path.write_text(json.dumps({"book_summary": book_out}, ensure_ascii=False, indent=2), encoding="utf-8")
+        logger.info(f"[summary] Сохранили общий summary → {book_path.name}")
