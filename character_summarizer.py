@@ -181,21 +181,27 @@ def run_stage(paths: Dict[str, Path], cfg: Dict[str, Any]) -> None:
         return
     raw_data = json.loads(ctx_path.read_text(encoding="utf-8"))
 
-    # извлекаем список контекстов
+    # извлекаем список контекстов (context builder у нас отдаёт plain List[dict] с key "events")
     if isinstance(raw_data, dict) and "contexts" in raw_data:
         ctx_list = raw_data["contexts"]
+    elif isinstance(raw_data, list):
+        ctx_list = raw_data
     else:
-        ctx_list = raw_data if isinstance(raw_data, list) else []
+        logger.error(f"[summary] Неподдерживаемый формат {ctx_path}, ожидаю List или {{'contexts':[...]}}")
+        return
 
-    # выбираем топ‑N по количеству events
+    # логируем общее число кандидатов
+    logger.info(f"[summary] Из контекстов получили {len(ctx_list)} кандидатов")
+    # берём только топ‑N по числу событий (events)
     if isinstance(top_n, int) and top_n > 0:
         ctx_list = sorted(
             ctx_list,
-            key=lambda ent: len(ent.get("events", [])),
-            reverse=True
-        )[:top_n]
+            key = lambda ent: len(ent.get("events", [])),
+            reverse = True
+        )[: top_n]
+        logger.info(f"[summary] Оставляем топ‑{top_n} по events: {len(ctx_list)} персонажей")
 
-    items = [
+        items = [
         (str(ent.get("entity_id", ent.get("id", ""))), ent)
         for ent in ctx_list
     ]
