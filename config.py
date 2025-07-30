@@ -55,7 +55,7 @@ STAGE_CFG: Dict[str, Dict[str, Any]] = {
     },
     "ner_validator": {
         "sample_mentions": 3,
-        "model_name":      "ai-forever/FRED-T5-base",
+        "model_name":      "ai-forever/FRED-T5-large",
         "device":          "cuda",
     },
     "coref": {
