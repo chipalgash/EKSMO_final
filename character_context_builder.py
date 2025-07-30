@@ -1,256 +1,127 @@
 # -*- coding: utf-8 -*-
+"""
+Стадия Contexts: сбор контекстов упоминаний персонажей.
+Чтение:
+  50_coref/<book_id>_coref.json
+  20_preprocessed/<book_id>_preprocessed.json
+Запись:
+  70_contexts/<book_id>_contexts.json
+"""
 from __future__ import annotations
-import re
 import json
 from pathlib import Path
-from typing import Dict, Any, List, Tuple
+from typing import Any, Dict, List, Tuple
 from loguru import logger
 
-import torch
-from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
-
-# -------------------- PROMPTS --------------------
-SYS_INSTR = (
-    "Ты — литературный редактор. "
-    "Твоя задача — кратко и структурированно описать персонажа. "
-    "Игнорируй объекты, организации и предметы — интересуют только люди/персонажи. "
-    "Пиши по-русски, научно-нейтральным стилем (без воды и клише)."
-)
-
-PROMPT_TEMPLATE = """{sys}
-
-Фрагменты о персонаже «{name}» (в хронологическом порядке):
-{context}
-
-Пожалуйста, составь ответ следующих блоков. Каждый блок обязательно отдели заголовком и пустой строкой:
-
-Биография:
-<3–4 предложения о прошлом персонажа>
-
-Черты:
-- trait1
-- trait2
-- trait3
-
-Хронология:
-- событие 1 (коротко)
-- событие 2
-- событие 3
-
-Итоговый сюжет:
-<5–7 предложений о роли и развитии персонажа в истории>
-
-Никаких JSON, списков полей и лишнего текста — только эти четыре блока.
-"""
-
-# -------------------- UTILITIES --------------------
-def enc_len(tokenizer, text: str) -> int:
-    return len(tokenizer.encode(text, add_special_tokens=False))
-
-def make_sent_chunks_by_tokens(
-    lines: List[str],
-    tokenizer,
-    max_tokens: int,
-    overlap: int
-) -> List[str]:
-    chunks: List[str] = []
-    start = 0
-    n = len(lines)
-    while start < n:
-        buf: List[str] = []
-        tok_count = 0
-        i = start
-        while i < n:
-            ln = lines[i]
-            ln_tokens = enc_len(tokenizer, ln) + 1
-            if buf and tok_count + ln_tokens > max_tokens:
-                break
-            buf.append(ln)
-            tok_count += ln_tokens
-            i += 1
-        chunks.append("\n".join(buf))
-        start = max(i - overlap, start + 1)
-    return chunks
-
-def normalize_list_str(lst: List[str]) -> List[str]:
-    seen = set()
-    out: List[str] = []
-    for x in lst:
-        s = x.strip(" •-–—*").strip()
-        if s and s not in seen:
-            seen.add(s)
-            out.append(s)
-    return out
-
-def parse_summary_text(text: str) -> dict:
-    pattern = (
-        r"Биография:\s*(?P<bio>.*?)\n+"
-        r"Черты:\s*(?P<traits>.*?)\n+"
-        r"Хронология:\s*(?P<timeline>.*?)\n+"
-        r"Итоговый сюжет:\s*(?P<story>.*)"
-    )
-    m = re.search(pattern, text, flags=re.DOTALL)
-    if not m:
-        return {
-            "biography": "",
-            "traits": [],
-            "timeline": [],
-            "story_summary": text.strip()
-        }
-    bio_block      = m.group("bio").strip()
-    traits_block   = m.group("traits").strip()
-    timeline_block = m.group("timeline").strip()
-    story_block    = m.group("story").strip()
-
-    traits   = re.findall(r"^[\-\*\u2022]\s*(.+)$", traits_block, flags=re.M)
-    timeline = re.findall(r"^[\-\*\u2022]\s*(.+)$", timeline_block, flags=re.M)
-
-    return {
-        "biography": bio_block,
-        "traits": traits,
-        "timeline": timeline,
-        "story_summary": story_block
-    }
-
-def merge_piece(merged: dict, piece: dict):
-    if not merged["biography"] and piece.get("biography"):
-        merged["biography"] = piece["biography"]
-    if piece.get("traits"):
-        merged["traits"].extend(piece["traits"])
-    if piece.get("timeline"):
-        merged["timeline"].extend(piece["timeline"])
-    if piece.get("story_summary"):
-        if merged["story_summary"]:
-            merged["story_summary"] += " " + piece["story_summary"]
-        else:
-            merged["story_summary"] = piece["story_summary"]
-
-def post_clean(merged: dict):
-    merged["traits"]        = normalize_list_str(merged["traits"])
-    merged["timeline"]      = normalize_list_str(merged["timeline"])
-    merged["biography"]     = merged["biography"].strip()
-    merged["story_summary"] = merged["story_summary"].strip()
-
-# -------------------- MODEL --------------------
-class FredSummarizer:
-    def __init__(self, model_name: str, device: str):
-        logger.info(f"Loading FRED‑T5 '{model_name}' on {device}")
-        self.tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
-        self.model     = AutoModelForSeq2SeqLM.from_pretrained(model_name).to(device)
-        self.device    = device
-
-    @torch.inference_mode()
-    def generate(self, prompt: str, max_input_tokens: int, max_gen_tokens: int) -> str:
-        inputs = self.tokenizer(
-            prompt,
-            truncation=True,
-            max_length=max_input_tokens,
-            return_tensors="pt"
-        ).to(self.device)
-        out_ids = self.model.generate(
-            **inputs,
-            max_new_tokens=max_gen_tokens,
-            num_beams=4,
-            no_repeat_ngram_size=3
-        )
-        return self.tokenizer.decode(out_ids[0], skip_special_tokens=True)
-
-# -------------------- STAGE --------------------
 def run_stage(paths: Dict[str, Path], cfg: Dict[str, Any]) -> None:
-    book_id   = paths["book_root"].name
-    ctx_path  = paths["contexts_dir"]  / f"{book_id}_contexts.json"
-    out_dir   = paths["summary_dir"]
+    book_id      = paths["book_root"].name
+    coref_path   = paths["coref_dir"]     / f"{book_id}_coref.json"
+    preproc_path = paths["preprocess_dir"] / f"{book_id}_preprocessed.json"
+    out_dir      = paths["contexts_dir"]
     out_dir.mkdir(parents=True, exist_ok=True)
+    out_path     = out_dir / f"{book_id}_contexts.json"
 
-    summ_cfg   = cfg.get("summary", {})
-    model_type = summ_cfg.get("model", "fred_t5")
-    device     = summ_cfg.get("device", "cuda")
-    max_input  = summ_cfg.get("chunk_tokens", 900)
-    max_gen    = summ_cfg.get("gen_tokens", 512)
-    overlap    = summ_cfg.get("sent_overlap", 2)
-    max_events = summ_cfg.get("max_events", 120)
-    save_book  = summ_cfg.get("save_book_summary", False)
-    top_n      = summ_cfg.get("top_chars", None)  # ожидаем целое число
-
-    if model_type != "fred_t5":
-        raise ValueError(f"Unsupported summary model: {model_type}")
-    summarizer = FredSummarizer(summ_cfg.get("model_name", "ai-forever/FRED-T5-large"), device)
-
-    if not ctx_path.exists():
-        logger.error(f"[summary] Contexts not found: {ctx_path}")
+    # Пропустить, если уже есть и не force
+    if out_path.exists() and not cfg.get("force", False):
+        logger.info(f"[contexts] Есть, пропускаю: {out_path.name}")
         return
-    raw_data = json.loads(ctx_path.read_text(encoding="utf-8"))
 
-    # извлекаем список контекстов
-    if isinstance(raw_data, dict) and "contexts" in raw_data:
-        ctx_list = raw_data["contexts"]
-    else:
-        ctx_list = raw_data if isinstance(raw_data, list) else []
+    # Загрузка входных данных
+    if not coref_path.exists():
+        raise FileNotFoundError(f"[contexts] Нет coref‑файла: {coref_path}")
+    if not preproc_path.exists():
+        raise FileNotFoundError(f"[contexts] Нет препроцессинга: {preproc_path}")
+    coref_data = json.loads(coref_path.read_text(encoding="utf-8"))
+    prep_data  = json.loads(preproc_path.read_text(encoding="utf-8"))
 
-    # выбираем топ‑N по количеству events
-    if isinstance(top_n, int) and top_n > 0:
-        ctx_list = sorted(
-            ctx_list,
-            key=lambda ent: len(ent.get("events", [])),
-            reverse=True
-        )[:top_n]
+    # Параметры из config
+    left_win  = cfg.get("left_sentences", 2)
+    right_win = cfg.get("right_sentences", 1)
+    max_ctx   = cfg.get("max_contexts_per_char", 100)
+    max_chars = cfg.get("max_chars_per_context", 2500)
 
-    items = [
-        (str(ent.get("entity_id", ent.get("id", ""))), ent)
-        for ent in ctx_list
-    ]
-    total_chars = len(items)
-    logger.info(f"[summary] Начинаем суммаризацию {total_chars} персонажей")
+    # Строим кэш сцен: (chapter, scene) -> {text, sentences, offsets}
+    scene_cache: Dict[Tuple[int, int], Dict[str, Any]] = {}
+    for ch in prep_data.get("chapters", []):
+        ch_id = ch["id"]
+        for sc in ch.get("scenes", []):
+            sc_id = sc["id"]
+            text  = sc.get("text") or " ".join(s["text"] for s in sc.get("sentences", []))
+            sents = [s["text"] for s in sc.get("sentences", [])]
+            offs: List[Tuple[int, int]] = []
+            pos = 0
+            for sent in sents:
+                idx = text.find(sent, pos)
+                if idx < 0:
+                    idx = pos
+                offs.append((idx, idx + len(sent)))
+                pos = idx + len(sent)
+            scene_cache[(ch_id, sc_id)] = {
+                "text":      text,
+                "sentences": sents,
+                "offsets":   offs
+            }
 
-    characters_out: Dict[str, Any] = {}
-    for idx, (cid, ent) in enumerate(items, start=1):
-        # берём имя: сначала явно заданное "name", иначе — "norm"
-        name = ent.get("name") or ent.get("norm") or ""
-        logger.info(f"[summary] Персонаж {idx}/{total_chars} — id={cid}, name={name}")
+    # Собираем контексты для каждого персонажа
+    results: List[Dict[str, Any]] = []
+    for ent in coref_data.get("entities", []):
+        events: List[Dict[str, Any]] = []
+        mentions = sorted(
+            ent.get("mentions", []),
+            key=lambda m: (m["chapter"], m["scene"], m.get("sent_id", -1), m.get("start", -1))
+        )
+        for m in mentions:
+            ch_id, sc_id = m["chapter"], m["scene"]
+            cache = scene_cache.get((ch_id, sc_id))
+            if not cache:
+                continue
 
-        events = ent.get("events", [])[:max_events]
-        if not events:
-            logger.warning(f"[{cid}] Нет событий, пропускаю")
-            continue
+            sents, offs = cache["sentences"], cache["offsets"]
+            sid = m.get("sent_id")
+            if sid is None or not (0 <= sid < len(sents)):
+                # Ищем предложение по смещению
+                start = m.get("start", 0)
+                for i, (st, en) in enumerate(offs):
+                    if st <= start < en:
+                        sid = i
+                        break
+                else:
+                    sid = 0
 
-        # формируем фрагменты
-        lines = [
-            f"[Гл.{e['chapter']} Сц.{e['scene']} #{e['sent_id']}] {e['text']}"
-            for e in events
-        ]
-        chunks = make_sent_chunks_by_tokens(lines, summarizer.tokenizer, max_input, overlap)
-        logger.info(f"[{cid}] Разбито на {len(chunks)} чанков")
+            left  = max(0, sid - left_win)
+            right = min(len(sents) - 1, sid + right_win)
+            window = sents[left : right + 1]
 
-        merged = {"biography": "", "traits": [], "timeline": [], "story_summary": ""}
-        for j, chunk in enumerate(chunks, start=1):
-            logger.info(f"[{cid}] Обрабатываю чанк {j}/{len(chunks)}")
-            prompt = PROMPT_TEMPLATE.format(sys=SYS_INSTR, name=name, context=chunk)
-            raw    = summarizer.generate(prompt, max_input, max_gen)
-            piece  = parse_summary_text(raw)
-            merge_piece(merged, piece)
-            logger.info(f"[{cid}] Чанк {j}/{len(chunks)} обработан")
+            span_start = offs[left][0]
+            span_end   = offs[right][1]
+            fragment   = cache["text"][span_start : span_end]
+            if len(fragment) > max_chars:
+                fragment = fragment[:max_chars]
 
-        post_clean(merged)
-        logger.info(f"[{cid}] Готов итоговый summary персонажа")
-        characters_out[cid] = {"name": name, **merged}
+            events.append({
+                "mention_id":   m.get("mention_id"),
+                "chapter":      ch_id,
+                "scene":        sc_id,
+                "sent_id":      sid,
+                "window":       window,
+                "text":         fragment,
+                "mention_text": m.get("text"),
+                "type":         m.get("type", "name")
+            })
+            if len(events) >= max_ctx:
+                break
 
-    # сохраняем результаты
-    char_path = out_dir / f"{book_id}_characters_summary.json"
-    char_path.write_text(
-        json.dumps(characters_out, ensure_ascii=False, indent=2),
+        results.append({
+            "entity_id": ent.get("id"),
+            "norm":      ent.get("norm"),
+            "gender":    ent.get("gender", "unknown"),
+            "aliases":   ent.get("aliases", []),
+            "events":    events
+        })
+
+    # Сохраняем результаты
+    out_path.write_text(
+        json.dumps(results, ensure_ascii=False, indent=2),
         encoding="utf-8"
     )
-    logger.info(f"[summary] Characters saved → {char_path.name}")
-
-    # опционально – общий summary книги
-    if save_book:
-        combined   = "\n".join(f"{v['name']}: {v['biography']}" for v in characters_out.values())
-        book_prompt = "Общая история книги через призму персонажей:\n\n" + combined
-        book_raw    = summarizer.generate(book_prompt, max_input * 2, max_gen)
-        book_summary = book_raw.strip()
-        book_path = out_dir / f"{book_id}_book_summary.json"
-        book_path.write_text(
-            json.dumps({"book_summary": book_summary}, ensure_ascii=False, indent=2),
-            encoding="utf-8"
-        )
-        logger.info(f"[summary] Book summary saved → {book_path.name}")
+    logger.info(f"[contexts] Сохранено: {out_path.name}")

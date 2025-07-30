@@ -83,12 +83,6 @@ def normalize_list_str(lst: List[str]) -> List[str]:
     return out
 
 def parse_summary_text(text: str) -> dict:
-    """
-    Извлекает четыре секции из сгенерированного текста:
-    'Биография', 'Черты', 'Хронология', 'Итоговый сюжет'
-    и возвращает их как словарь.
-    Если не удаётся найти все секции, возвращает весь текст в story_summary.
-    """
     pattern = (
         r"Биография:\s*(?P<bio>.*?)\n+"
         r"Черты:\s*(?P<traits>.*?)\n+"
@@ -176,71 +170,71 @@ def run_stage(paths: Dict[str, Path], cfg: Dict[str, Any]) -> None:
     overlap    = summ_cfg.get("sent_overlap", 2)
     max_events = summ_cfg.get("max_events", 120)
     save_book  = summ_cfg.get("save_book_summary", False)
+    top_n      = summ_cfg.get("top_chars", None)  # ожидаем целое число
 
-    # инициализация модели
-    if model_type == "fred_t5":
-        model_name = summ_cfg.get("model_name", "ai-forever/FRED-T5-large")
-        summarizer = FredSummarizer(model_name, device)
-    else:
+    if model_type != "fred_t5":
         raise ValueError(f"Unsupported summary model: {model_type}")
+    summarizer = FredSummarizer(summ_cfg.get("model_name", "ai-forever/FRED-T5-large"), device)
 
-    # загрузка контекстов
     if not ctx_path.exists():
         logger.error(f"[summary] Contexts not found: {ctx_path}")
         return
     raw_data = json.loads(ctx_path.read_text(encoding="utf-8"))
 
-    # подготовка списка элементов
+    # извлекаем список контекстов
     if isinstance(raw_data, dict) and "contexts" in raw_data:
         ctx_list = raw_data["contexts"]
-        # Выбираем топ-N персонажей по числу фрагментов (contexts)
-        top_n = summ_cfg.get("top_chars", None)
-        if top_n is not None:
-            # сортируем по убыванию длины списка contexts
-            ctx_list = sorted(
-                ctx_list,
-                key=lambda ent: len(ent.get("contexts", [])),
-                reverse=True
-            )[:top_n]
     else:
         ctx_list = raw_data if isinstance(raw_data, list) else []
 
-    items = [(str(ent.get("entity_id", ent.get("id", ""))), ent) for ent in ctx_list]
+    # выбираем топ‑N по количеству events
+    if isinstance(top_n, int) and top_n > 0:
+        ctx_list = sorted(
+            ctx_list,
+            key=lambda ent: len(ent.get("events", [])),
+            reverse=True
+        )[:top_n]
+
+    items = [
+        (str(ent.get("entity_id", ent.get("id", ""))), ent)
+        for ent in ctx_list
+    ]
     total_chars = len(items)
     logger.info(f"[summary] Начинаем суммаризацию {total_chars} персонажей")
 
-    # цикл по персонажам
     characters_out: Dict[str, Any] = {}
     for idx, (cid, ent) in enumerate(items, start=1):
-        name   = ent.get("norm", "")
+        # берём имя: сначала явно заданное "name", иначе — "norm"
+        name = ent.get("name") or ent.get("norm") or ""
         logger.info(f"[summary] Персонаж {idx}/{total_chars} — id={cid}, name={name}")
-        events = ent.get("contexts", [])[:max_events]
+
+        events = ent.get("events", [])[:max_events]
         if not events:
+            logger.warning(f"[{cid}] Нет событий, пропускаю")
             continue
 
+        # формируем фрагменты
         lines = [
             f"[Гл.{e['chapter']} Сц.{e['scene']} #{e['sent_id']}] {e['text']}"
             for e in events
         ]
         chunks = make_sent_chunks_by_tokens(lines, summarizer.tokenizer, max_input, overlap)
-        total_chunks = len(chunks)
-        logger.info(f"[{cid}] Разбито на {total_chunks} чанков (chunk_tokens={max_input}, overlap={overlap})")
+        logger.info(f"[{cid}] Разбито на {len(chunks)} чанков")
 
         merged = {"biography": "", "traits": [], "timeline": [], "story_summary": ""}
         for j, chunk in enumerate(chunks, start=1):
-            logger.info(f"[{cid}] Обрабатываю чанк {j}/{total_chunks}")
+            logger.info(f"[{cid}] Обрабатываю чанк {j}/{len(chunks)}")
             prompt = PROMPT_TEMPLATE.format(sys=SYS_INSTR, name=name, context=chunk)
             raw    = summarizer.generate(prompt, max_input, max_gen)
             piece  = parse_summary_text(raw)
             merge_piece(merged, piece)
-            logger.info(f"[{cid}] Чанк {j}/{total_chunks} обработан")
+            logger.info(f"[{cid}] Чанк {j}/{len(chunks)} обработан")
 
         post_clean(merged)
         logger.info(f"[{cid}] Готов итоговый summary персонажа")
         characters_out[cid] = {"name": name, **merged}
 
-    logger.info(f"[summary] Все персонажи обработаны, сохраняю результаты")
-    # сохраняем summaries персонажей
+    # сохраняем результаты
     char_path = out_dir / f"{book_id}_characters_summary.json"
     char_path.write_text(
         json.dumps(characters_out, ensure_ascii=False, indent=2),
@@ -248,13 +242,12 @@ def run_stage(paths: Dict[str, Path], cfg: Dict[str, Any]) -> None:
     )
     logger.info(f"[summary] Characters saved → {char_path.name}")
 
-    # опционально summary всей книги
+    # опционально – общий summary книги
     if save_book:
-        combined    = "\n".join(f"{v['name']}: {v['biography']}" for v in characters_out.values())
+        combined   = "\n".join(f"{v['name']}: {v['biography']}" for v in characters_out.values())
         book_prompt = "Общая история книги через призму персонажей:\n\n" + combined
         book_raw    = summarizer.generate(book_prompt, max_input * 2, max_gen)
         book_summary = book_raw.strip()
-
         book_path = out_dir / f"{book_id}_book_summary.json"
         book_path.write_text(
             json.dumps({"book_summary": book_summary}, ensure_ascii=False, indent=2),
