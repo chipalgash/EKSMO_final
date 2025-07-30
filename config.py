@@ -4,15 +4,18 @@ from pathlib import Path
 from typing import Any, Dict
 
 STAGE_ORDER = [
-    "reader",
-    "preprocess",
-    "ner",
-    "ner_check",
-    "coref",
-    "relations",
-    "contexts",
-    "summary",
+  "reader",
+  "preprocess",
+  "ner",
+  "ner_check",
+  "ner_validator",
+  "coref",
+  "relations",
+  "contexts",
+  "sort_contexts",
+  "summary",
 ]
+
 
 STAGE_MODULES = {
     "reader":        "doc_reader",
@@ -22,8 +25,9 @@ STAGE_MODULES = {
     "ner_validator": "ner_llm_validator",
     "coref":         "coref_resolver",
     "relations":     "relationships_extractor",
-    "contexts":      "character_context_builder",
-    "summary":       "character_summarizer",
+    "contexts": "character_context_builder",
+    "sort_contexts": "context_sorter",
+    "summary": "character_summarizer",
 }
 
 STAGE_CFG: Dict[str, Dict[str, Any]] = {
@@ -79,6 +83,10 @@ STAGE_CFG: Dict[str, Dict[str, Any]] = {
         "max_contexts_per_char": 100,
         "max_chars_per_context": 2500,
     },
+    "sort_contexts": {
+        "enabled":   True,   # включить/отключить
+        "top_chars": 5,      # сколько персонажей оставить (None = всех)
+     },
     "summary": {
         "model":             "fred_t5",
         "model_name":        "ai-forever/FRED-T5-large",
