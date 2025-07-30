@@ -8,7 +8,6 @@ STAGE_ORDER = [
     "preprocess",
     "ner",
     "ner_check",
-    "ner_validator",
     "coref",
     "relations",
     "contexts",

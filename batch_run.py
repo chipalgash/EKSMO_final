@@ -2,7 +2,7 @@ import shutil
 import subprocess
 from pathlib import Path
 
-DOCS_DIR = Path("path/to/your/docx_folder")
+DOCS_DIR = Path("books")
 WORKSPACE = Path("workspace")
 
 for docx_path in DOCS_DIR.glob("*.docx"):
