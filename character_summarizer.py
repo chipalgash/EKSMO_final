@@ -193,6 +193,15 @@ def run_stage(paths: Dict[str, Path], cfg: Dict[str, Any]) -> None:
     # подготовка списка элементов
     if isinstance(raw_data, dict) and "contexts" in raw_data:
         ctx_list = raw_data["contexts"]
+        # Выбираем топ-N персонажей по числу фрагментов (contexts)
+        top_n = summ_cfg.get("top_chars", None)
+        if top_n is not None:
+            # сортируем по убыванию длины списка contexts
+            ctx_list = sorted(
+                ctx_list,
+                key=lambda ent: len(ent.get("contexts", [])),
+                reverse=True
+            )[:top_n]
     else:
         ctx_list = raw_data if isinstance(raw_data, list) else []
 

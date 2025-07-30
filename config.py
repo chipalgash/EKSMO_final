@@ -88,6 +88,7 @@ STAGE_CFG: Dict[str, Dict[str, Any]] = {
         "sent_overlap":      2,
         "max_events":        120,
         "save_book_summary": True,
+        "top_chars":         5
     },
 }
 
