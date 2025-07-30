@@ -138,7 +138,7 @@ def run_stage(paths: Dict[str, Path], cfg: Dict[str, Any]) -> None:
             "norm":      norm,
             "gender":    gender,
             "aliases":   aliases,
-            "events":    events,
+            "contexts":    events,
         })
 
     # Сохраняем итог
