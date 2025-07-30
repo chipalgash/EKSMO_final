@@ -148,7 +148,9 @@ class FredSummarizer:
 # -------------------- STAGE --------------------
 def run_stage(paths: Dict[str, Path], cfg: Dict[str, Any]) -> None:
     book_id   = paths["book_root"].name
-    ctx_path  = paths["contexts_dir"]  / f"{book_id}_contexts.json"
+    # если есть фильтр — читаем из него, иначе из обычного contexts
+    src = paths.get("filter_contexts_dir", paths["contexts_dir"])
+    ctx_path = src / f"{book_id}_contexts.json"
     out_dir   = paths["summary_dir"]; out_dir.mkdir(parents=True, exist_ok=True)
 
     summ_cfg   = cfg.get("summary", {})
@@ -161,7 +163,7 @@ def run_stage(paths: Dict[str, Path], cfg: Dict[str, Any]) -> None:
     save_book  = summ_cfg.get("save_book_summary", False)
     top_n      = summ_cfg.get("top_chars", None)
 
-    logger.info(f"[summary] Конфиг: top_chars={top_n}, max_events={max_events}, overlap={overlap}")
+    logger.info(f"[summary] Конфиг: топ‑{top_n} персонажей, max_events={max_events}, overlap={overlap}")
 
     if model_type != "fred_t5":
         raise ValueError(f"Unsupported summary model: {model_type}")
