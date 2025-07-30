@@ -163,7 +163,8 @@ def run_stage(paths: Dict[str, Path], cfg: Dict[str, Any]) -> None:
 
     if model_type != "fred_t5":
         raise ValueError(f"Unsupported summary model: {model_type}")
-    summarizer = FredSummarizer(summ_cfg["model_name"], device)
+    model_name = summ_cfg.get("model_name", "ai-forever/FRED-T5-large")
+    summarizer = FredSummarizer(model_name, device)
 
     if not ctx_path.exists():
         logger.error(f"[summary] Contexts not found: {ctx_path}")
